@@ -9,6 +9,8 @@ function Admin() {
   const [logs, setLogs] = useState([]);
   const [unverifiedTags, setUnverifiedTags] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [importFile, setImportFile] = useState(null);
+  const [importResult, setImportResult] = useState(null);
 
   const authenticate = () => {
     // 簡易認証（実際の実装ではより安全な方法を使用）
@@ -86,7 +88,52 @@ function Admin() {
     }
   };
 
-  const runAITagging = async () => {
+  const handleBulkImport = async () => {
+    if (!importFile) return;
+
+    setLoading(true);
+    setImportResult(null);
+
+    try {
+      const fileContent = await importFile.text();
+      const data = JSON.parse(fileContent);
+
+      const response = await fetch(`${API_BASE_URL}/api/bulk-import/from-json`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ data }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setImportResult({
+          success: true,
+          message: result.message,
+          details: result.results,
+        });
+        // 統計情報を再読み込み
+        fetchStats();
+      } else {
+        setImportResult({
+          success: false,
+          message: result.error || 'データ投入に失敗しました',
+        });
+      }
+    } catch (error) {
+      console.error('Import error:', error);
+      setImportResult({
+        success: false,
+        message: `エラー: ${error.message}`,
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const runAITagging = async () {
     const token = localStorage.getItem('admin_token');
     setLoading(true);
     try {
@@ -276,13 +323,70 @@ function Admin() {
                 disabled={loading}
               >
                 AIタグづけ実行
-              </button>
+              </button>          </div>
+        </div>
+
+        {/* データ一括投入 */}
+        <div className="bg-white rounded-lg shadow p-6">
+          <h2 className="text-xl font-semibold mb-4">データ一括投入</h2>
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                JSONファイルを選択
+              </label>
+              <input
+                type="file"
+                accept=".json"
+                onChange={(e) => setImportFile(e.target.files[0])}
+                className="block w-full text-sm text-gray-500
+                  file:mr-4 file:py-2 file:px-4
+                  file:rounded-md file:border-0
+                  file:text-sm file:font-semibold
+                  file:bg-primary-50 file:text-primary-700
+                  hover:file:bg-primary-100"
+              />
+              <p className="mt-1 text-sm text-gray-500">
+                hololive-data.json または nijisanji-data.json
+              </p>
             </div>
+            <button
+              className="btn btn-primary"
+              onClick={handleBulkImport}
+              disabled={loading || !importFile}
+            >
+              データ投入実行
+            </button>
+
+            {importResult && (
+              <div className={`p-4 rounded-md ${
+                importResult.success ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'
+              }`}>
+                <h3 className="font-semibold mb-2">投入結果</h3>
+                <p>{importResult.message}</p>
+                {importResult.details && (
+                  <div className="mt-2 text-sm">
+                    <p>成功: {importResult.details.success?.length || 0}件</p>
+                    <p>失敗: {importResult.details.failed?.length || 0}件</p>
+                    {importResult.details.failed?.length > 0 && (
+                      <details className="mt-2">
+                        <summary className="cursor-pointer">失敗詳細</summary>
+                        <ul className="mt-1 list-disc list-inside">
+                          {importResult.details.failed.map((item, i) => (
+                            <li key={i}>{item.name}: {item.error}</li>
+                          ))}
+                        </ul>
+                      </details>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
-      )}
-
-      {/* Tags Tab */}
+      </div>
+    </div>
+  );
+}      {/* Tags Tab */}
       {activeTab === 'tags' && (
         <div className="card">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">

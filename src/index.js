@@ -7,6 +7,7 @@ import { tagRoutes } from './routes/tags';
 import { adminRoutes } from './routes/admin';
 import { adminActionsRoutes } from './routes/admin-actions';
 import { searchRoutes } from './routes/search';
+import { bulkImportRoutes } from './routes/bulk-import';
 
 const app = new Hono();
 
@@ -34,6 +35,7 @@ app.route('/api/tags', tagRoutes);
 app.route('/api/admin', adminRoutes);
 app.route('/api/admin', adminActionsRoutes);
 app.route('/api/search', searchRoutes);
+app.route('/api/bulk-import', bulkImportRoutes);
 
 // エラーハンドリング
 app.onError((err, c) => {
