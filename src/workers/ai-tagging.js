@@ -82,8 +82,8 @@ export async function runAITagging(env, limit = 100) {
 
         processedCount++;
 
-        // レート制限対策（1秒待機）
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        // レート制限対策（待機時間を短縮）
+        // await new Promise(resolve => setTimeout(resolve, 100));
       } catch (error) {
         console.error(`Error tagging VTuber ${vtuber.id}:`, error);
         errorCount++;
