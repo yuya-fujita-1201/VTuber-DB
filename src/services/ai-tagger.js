@@ -37,7 +37,7 @@ export class AITaggerService {
           'Authorization': `Bearer ${this.apiKey}`,
         },
         body: JSON.stringify({
-          model: 'gpt-4.1-mini',
+          model: 'gpt-4o-mini',
           messages: [
             {
               role: 'system',
@@ -218,7 +218,7 @@ JSON形式で出力してください：
           'Authorization': `Bearer ${this.apiKey}`,
         },
         body: JSON.stringify({
-          model: 'gpt-4.1-mini',
+          model: 'gpt-4o-mini',
           messages: [
             {
               role: 'system',
