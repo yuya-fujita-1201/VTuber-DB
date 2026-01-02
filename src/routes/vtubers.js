@@ -11,13 +11,9 @@ vtuberRoutes.get('/', async (c) => {
     let query = `
       SELECT 
         v.*,
-        y.subscriber_count as youtube_subscribers,
-        t.follower_count as twitter_followers,
-        tw.follower_count as twitch_followers
+        y.subscriber_count as youtube_subscribers
       FROM vtubers v
       LEFT JOIN youtube_channels y ON v.id = y.vtuber_id
-      LEFT JOIN twitter_accounts t ON v.id = t.vtuber_id
-      LEFT JOIN twitch_channels tw ON v.id = tw.vtuber_id
     `;
 
     const conditions = [];
@@ -38,7 +34,7 @@ vtuberRoutes.get('/', async (c) => {
         query += ' ORDER BY y.subscriber_count DESC';
         break;
       case 'followers':
-        query += ' ORDER BY t.follower_count DESC';
+        query += ' ORDER BY y.subscriber_count DESC';
         break;
       case 'debut':
         query += ' ORDER BY v.debut_date DESC';
@@ -98,17 +94,7 @@ vtuberRoutes.get('/:id', async (c) => {
       .bind(id)
       .all();
 
-    // Twitter情報
-    const { results: twitter } = await db
-      .prepare('SELECT * FROM twitter_accounts WHERE vtuber_id = ?')
-      .bind(id)
-      .all();
-
-    // Twitch情報
-    const { results: twitch } = await db
-      .prepare('SELECT * FROM twitch_channels WHERE vtuber_id = ?')
-      .bind(id)
-      .all();
+    // Twitter/Twitch情報は削除済み
 
     // タグ情報
     const { results: tags } = await db
@@ -136,8 +122,6 @@ vtuberRoutes.get('/:id', async (c) => {
     return c.json({
       ...vtuber,
       youtube: youtube[0] || null,
-      twitter: twitter[0] || null,
-      twitch: twitch[0] || null,
       tags: tags,
       recent_streams: streams,
     });
