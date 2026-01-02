@@ -114,38 +114,7 @@ function VTuberDetail() {
                   </div>
                 </div>
               )}
-              {vtuber.twitter && (
-                <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
-                  <div>
-                    <div className="text-sm text-gray-600">Twitter/X</div>
-                    <div className="text-xl font-semibold text-gray-900">
-                      @{vtuber.twitter.username}
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-blue-600">
-                      {vtuber.twitter.follower_count?.toLocaleString() || 0}
-                    </div>
-                    <div className="text-sm text-gray-600">フォロワー</div>
-                  </div>
-                </div>
-              )}
-              {vtuber.twitch && (
-                <div className="flex items-center justify-between p-4 bg-purple-50 rounded-lg">
-                  <div>
-                    <div className="text-sm text-gray-600">Twitch</div>
-                    <div className="text-xl font-semibold text-gray-900">
-                      {vtuber.twitch.channel_name}
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-purple-600">
-                      {vtuber.twitch.follower_count?.toLocaleString() || 0}
-                    </div>
-                    <div className="text-sm text-gray-600">フォロワー</div>
-                  </div>
-                </div>
-              )}
+
             </div>
           </div>
 

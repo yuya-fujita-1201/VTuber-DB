@@ -236,11 +236,7 @@ function Search() {
                           📺 {vtuber.youtube_subscribers.toLocaleString()}
                         </span>
                       )}
-                      {vtuber.twitter_followers && (
-                        <span className="text-blue-600">
-                          🐦 {vtuber.twitter_followers.toLocaleString()}
-                        </span>
-                      )}
+
                     </div>
                   </Link>
                 ))}

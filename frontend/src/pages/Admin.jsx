@@ -265,17 +265,10 @@ function Admin() {
               </button>
               <button
                 className="btn btn-primary"
-                onClick={() => runSync('twitter')}
+                onClick={() => runSync('web')}
                 disabled={loading}
               >
-                Twitter同期
-              </button>
-              <button
-                className="btn btn-primary"
-                onClick={() => runSync('twitch')}
-                disabled={loading}
-              >
-                Twitch同期
+                Webスクレイピング
               </button>
               <button
                 className="btn btn-primary"

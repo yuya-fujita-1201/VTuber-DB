@@ -3,7 +3,7 @@
  * 定期実行タスク
  */
 
-import { syncYouTubeData, syncTwitterData, syncTwitchData } from './workers/sync.js';
+import { syncYouTubeData, syncWebData } from './workers/sync.js';
 import { runAITagging } from './workers/ai-tagging.js';
 
 export async function handleScheduled(event, env, ctx) {
@@ -18,16 +18,10 @@ export async function handleScheduled(event, env, ctx) {
       await syncYouTubeData(env);
     }
 
-    // 12時間ごとにTwitter同期（0, 12時）
+    // 12時間ごとにWebスクレイピング（0, 12時）
     if (hour % 12 === 0) {
-      console.log('Running Twitter sync...');
-      await syncTwitterData(env);
-    }
-
-    // 12時間ごとにTwitch同期（0, 12時）
-    if (hour % 12 === 0) {
-      console.log('Running Twitch sync...');
-      await syncTwitchData(env);
+      console.log('Running web scraping...');
+      await syncWebData(env);
     }
 
     // 毎日0時にAIタグづけ（最大50件）

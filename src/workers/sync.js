@@ -4,8 +4,6 @@
  */
 
 import { YouTubeService } from '../services/youtube.js';
-import { TwitterService } from '../services/twitter.js';
-import { TwitchService } from '../services/twitch.js';
 
 /**
  * YouTube情報の同期
@@ -33,6 +31,20 @@ export async function syncYouTubeData(env) {
 
     console.log(`Syncing ${channels.length} YouTube channels...`);
 
+    if (channels.length === 0) {
+      await db
+        .prepare(`
+          UPDATE update_logs
+          SET status = ?,
+              records_processed = 0,
+              completed_at = CURRENT_TIMESTAMP
+          WHERE id = ?
+        `)
+        .bind('success', logId)
+        .run();
+      return { success: true, processed: 0, errors: 0 };
+    }
+
     // チャンネルIDを抽出
     const channelIds = channels.map(c => c.channel_id);
 
@@ -51,6 +63,8 @@ export async function syncYouTubeData(env) {
                 video_count = ?,
                 custom_url = ?,
                 thumbnail_url = ?,
+                description = ?,
+                last_synced_at = CURRENT_TIMESTAMP,
                 updated_at = CURRENT_TIMESTAMP
             WHERE channel_id = ?
           `)
@@ -61,6 +75,7 @@ export async function syncYouTubeData(env) {
             info.video_count,
             info.custom_url,
             info.thumbnail_url,
+            info.description,
             info.channel_id
           )
           .run();
@@ -106,11 +121,10 @@ export async function syncYouTubeData(env) {
 }
 
 /**
- * Twitter情報の同期
+ * Web情報の収集（基本的なスクレイピング）
  */
-export async function syncTwitterData(env) {
+export async function syncWebData(env) {
   const db = env.DB;
-  const twitterService = new TwitterService(env.TWITTER_BEARER_TOKEN);
   
   let processedCount = 0;
   let errorCount = 0;
@@ -120,52 +134,66 @@ export async function syncTwitterData(env) {
     // ログ記録開始
     const logResult = await db
       .prepare('INSERT INTO update_logs (task_type, status, started_at) VALUES (?, ?, ?)')
-      .bind('twitter_sync', 'in_progress', startTime)
+      .bind('web_scraping', 'in_progress', startTime)
       .run();
     const logId = logResult.meta.last_row_id;
 
-    // Twitterアカウントが登録されているVTuberを取得
-    const { results: accounts } = await db
-      .prepare('SELECT id, vtuber_id, username FROM twitter_accounts')
+    // 公式サイトが登録されているVTuberを取得
+    const { results: vtubers } = await db
+      .prepare('SELECT id, name, official_website FROM vtubers WHERE official_website IS NOT NULL')
       .all();
 
-    console.log(`Syncing ${accounts.length} Twitter accounts...`);
+    console.log(`Scraping ${vtubers.length} VTuber websites...`);
 
-    // ユーザー名を抽出
-    const usernames = accounts.map(a => a.username);
-
-    // バッチで情報取得
-    const userInfos = await twitterService.getBatchUsersByUsername(usernames);
-
-    // データベース更新
-    for (const info of userInfos) {
+    for (const vtuber of vtubers) {
       try {
-        await db
-          .prepare(`
-            UPDATE twitter_accounts
-            SET display_name = ?,
-                follower_count = ?,
-                following_count = ?,
-                tweet_count = ?,
-                profile_image_url = ?,
-                updated_at = CURRENT_TIMESTAMP
-            WHERE username = ?
-          `)
-          .bind(
-            info.display_name,
-            info.follower_count,
-            info.following_count,
-            info.tweet_count,
-            info.profile_image_url,
-            info.username
-          )
-          .run();
+        // 基本的なHTTPリクエストでページを取得
+        const response = await fetch(vtuber.official_website, {
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (compatible; VTuberDB/1.0)',
+          },
+        });
 
-        processedCount++;
+        if (response.ok) {
+          const html = await response.text();
+          
+          // 簡易的な情報抽出（タイトル、メタ情報など）
+          const titleMatch = html.match(/<title>(.*?)<\/title>/i);
+          const descMatch = html.match(/<meta name="description" content="(.*?)"/i);
+          
+          const profileData = {
+            title: titleMatch ? titleMatch[1] : null,
+            description: descMatch ? descMatch[1] : null,
+            scraped_at: new Date().toISOString(),
+          };
+
+          // web_profilesテーブルに保存
+          await db
+            .prepare(`
+              INSERT INTO web_profiles (vtuber_id, source_url, source_type, profile_data, last_scraped_at)
+              VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP)
+              ON CONFLICT(vtuber_id, source_url) DO UPDATE SET
+                profile_data = excluded.profile_data,
+                last_scraped_at = CURRENT_TIMESTAMP,
+                updated_at = CURRENT_TIMESTAMP
+            `)
+            .bind(
+              vtuber.id,
+              vtuber.official_website,
+              'official_site',
+              JSON.stringify(profileData)
+            )
+            .run();
+
+          processedCount++;
+        }
       } catch (error) {
-        console.error(`Error updating account ${info.username}:`, error);
+        console.error(`Error scraping ${vtuber.official_website}:`, error);
         errorCount++;
       }
+
+      // レート制限対策
+      await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
     // ログ更新
@@ -180,10 +208,10 @@ export async function syncTwitterData(env) {
       .bind('success', processedCount, logId)
       .run();
 
-    console.log(`Twitter sync completed: ${processedCount} processed, ${errorCount} errors`);
+    console.log(`Web scraping completed: ${processedCount} processed, ${errorCount} errors`);
     return { success: true, processed: processedCount, errors: errorCount };
   } catch (error) {
-    console.error('Twitter sync failed:', error);
+    console.error('Web scraping failed:', error);
     
     // エラーログ記録
     await db
@@ -194,101 +222,7 @@ export async function syncTwitterData(env) {
             completed_at = CURRENT_TIMESTAMP
         WHERE task_type = ? AND started_at = ?
       `)
-      .bind('failed', error.message, 'twitter_sync', startTime)
-      .run();
-
-    return { success: false, error: error.message };
-  }
-}
-
-/**
- * Twitch情報の同期
- */
-export async function syncTwitchData(env) {
-  const db = env.DB;
-  const twitchService = new TwitchService(env.TWITCH_CLIENT_ID, env.TWITCH_CLIENT_SECRET);
-  
-  let processedCount = 0;
-  let errorCount = 0;
-  const startTime = new Date().toISOString();
-
-  try {
-    // ログ記録開始
-    const logResult = await db
-      .prepare('INSERT INTO update_logs (task_type, status, started_at) VALUES (?, ?, ?)')
-      .bind('twitch_sync', 'in_progress', startTime)
-      .run();
-    const logId = logResult.meta.last_row_id;
-
-    // Twitchチャンネルが登録されているVTuberを取得
-    const { results: channels } = await db
-      .prepare('SELECT id, vtuber_id, channel_name FROM twitch_channels')
-      .all();
-
-    console.log(`Syncing ${channels.length} Twitch channels...`);
-
-    // チャンネル名を抽出
-    const logins = channels.map(c => c.channel_name);
-
-    // バッチで情報取得
-    const userInfos = await twitchService.getBatchUsersByLogin(logins);
-
-    // データベース更新
-    for (const info of userInfos) {
-      try {
-        await db
-          .prepare(`
-            UPDATE twitch_channels
-            SET display_name = ?,
-                follower_count = ?,
-                view_count = ?,
-                profile_image_url = ?,
-                updated_at = CURRENT_TIMESTAMP
-            WHERE channel_name = ?
-          `)
-          .bind(
-            info.display_name,
-            info.follower_count,
-            info.view_count,
-            info.profile_image_url,
-            info.login
-          )
-          .run();
-
-        processedCount++;
-      } catch (error) {
-        console.error(`Error updating channel ${info.login}:`, error);
-        errorCount++;
-      }
-    }
-
-    // ログ更新
-    await db
-      .prepare(`
-        UPDATE update_logs
-        SET status = ?,
-            records_processed = ?,
-            completed_at = CURRENT_TIMESTAMP
-        WHERE id = ?
-      `)
-      .bind('success', processedCount, logId)
-      .run();
-
-    console.log(`Twitch sync completed: ${processedCount} processed, ${errorCount} errors`);
-    return { success: true, processed: processedCount, errors: errorCount };
-  } catch (error) {
-    console.error('Twitch sync failed:', error);
-    
-    // エラーログ記録
-    await db
-      .prepare(`
-        UPDATE update_logs
-        SET status = ?,
-            error_message = ?,
-            completed_at = CURRENT_TIMESTAMP
-        WHERE task_type = ? AND started_at = ?
-      `)
-      .bind('failed', error.message, 'twitch_sync', startTime)
+      .bind('failed', error.message, 'web_scraping', startTime)
       .run();
 
     return { success: false, error: error.message };
@@ -303,8 +237,7 @@ export async function syncAllData(env) {
   
   const results = {
     youtube: await syncYouTubeData(env),
-    twitter: await syncTwitterData(env),
-    twitch: await syncTwitchData(env),
+    web: await syncWebData(env),
   };
   
   console.log('Full data sync completed:', results);

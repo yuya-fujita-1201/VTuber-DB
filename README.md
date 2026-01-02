@@ -1,25 +1,25 @@
 # VTuber Database
 
-VTuberの情報を検索・閲覧できるデータベースシステムです。YouTube、Twitter、Twitchからデータを収集し、AIによる自動タグづけ機能を備えています。
+VTuberの情報を検索・閲覧できるデータベースシステムです。YouTube APIからデータを収集し、Webスクレイピングで追加情報を取得、AIによる自動タグづけ機能を備えています。
 
 ## 主な機能
 
 ### ユーザー向け機能
-- **高度な検索**: 名前、タグ、所属事務所、フォロワー数などで検索
-- **VTuber詳細情報**: プロフィール、ソーシャルメディア統計、配信情報
+- **高度な検索**: 名前、タグ、所属事務所、登録者数などで検索
+- **VTuber詳細情報**: プロフィール、YouTube統計、配信情報
 - **タグ検索**: AIが付与した属性タグでVTuberを探索
 - **統計情報**: 総VTuber数、登録者数などの統計
 
 ### 管理者機能
-- **データ同期**: YouTube、Twitter、Twitchからの定期データ更新
+- **データ同期**: YouTubeからの定期データ更新
+- **Webスクレイピング**: 公式サイトやWikiから追加情報を収集
 - **AIタグづけ**: OpenAI GPT-4を使用した自動タグ生成
 - **タグ管理**: AIが生成したタグの承認・削除
 - **更新ログ**: データ同期とAI処理の履歴確認
 
 ### データ収集
 - **YouTube Data API v3**: チャンネル情報、登録者数、動画数、配信情報
-- **Twitter/X API v2**: アカウント情報、フォロワー数、ツイート数
-- **Twitch API**: チャンネル情報、フォロワー数、配信情報
+- **Webスクレイピング**: 公式サイト、Wiki、ニュース記事から情報を収集
 
 ### AIタグづけ
 - 外見属性（髪の色、キャラクターデザイン系統）
@@ -42,8 +42,6 @@ VTuberの情報を検索・閲覧できるデータベースシステムです�
 
 ### 外部API
 - YouTube Data API v3
-- Twitter/X API v2
-- Twitch API
 - OpenAI API (GPT-4.1-mini)
 
 ## プロジェクト構造
@@ -52,20 +50,18 @@ VTuberの情報を検索・閲覧できるデータベースシステムです�
 VTuber-DB/
 ├── src/                      # バックエンドソース
 │   ├── index.js             # メインWorkerエントリーポイント
+│   ├── scheduled.js         # Cronトリガーハンドラー
 │   ├── routes/              # APIルート
 │   │   ├── vtubers.js       # VTuber CRUD
 │   │   ├── search.js        # 検索機能
 │   │   ├── tags.js          # タグ管理
 │   │   ├── youtube.js       # YouTube API
-│   │   ├── twitter.js       # Twitter API
-│   │   ├── twitch.js        # Twitch API
 │   │   ├── admin.js         # 管理者機能
 │   │   └── admin-actions.js # 管理者アクション
 │   ├── services/            # 外部API統合
 │   │   ├── youtube.js       # YouTube Data API
-│   │   ├── twitter.js       # Twitter API
-│   │   ├── twitch.js        # Twitch API
-│   │   └── ai-tagger.js     # AIタグづけ
+│   │   ├── ai-tagger.js     # AIタグづけ
+│   │   └── web-scraper.js   # Webスクレイピング
 │   └── workers/             # バックグラウンドジョブ
 │       ├── sync.js          # データ同期
 │       └── ai-tagging.js    # AIタグづけ実行
@@ -112,13 +108,6 @@ npm install
 ```bash
 # YouTube Data API v3
 YOUTUBE_API_KEY=your_youtube_api_key
-
-# Twitter/X API v2
-TWITTER_BEARER_TOKEN=your_twitter_bearer_token
-
-# Twitch API
-TWITCH_CLIENT_ID=your_twitch_client_id
-TWITCH_CLIENT_SECRET=your_twitch_client_secret
 
 # OpenAI API
 OPENAI_API_KEY=your_openai_api_key
@@ -170,14 +159,7 @@ npm run build
 # frontend/distディレクトリをCloudflare Pagesにアップロード
 ```
 
-### Cloudflare Pages設定
-
-1. Cloudflare Pagesで新しいプロジェクトを作成
-2. GitHubリポジトリを接続
-3. ビルド設定:
-   - ビルドコマンド: `cd frontend && npm install && npm run build`
-   - ビルド出力ディレクトリ: `frontend/dist`
-4. 環境変数を設定（必要に応じて）
+詳細は`QUICKSTART.md`または`DEPLOYMENT.md`を参照してください。
 
 ## API仕様
 
@@ -212,8 +194,7 @@ npm run build
 - `GET /api/admin/stats` - 管理者統計
 - `GET /api/admin/unverified-tags` - 未承認タグ一覧
 - `POST /api/admin/sync/youtube` - YouTube同期実行
-- `POST /api/admin/sync/twitter` - Twitter同期実行
-- `POST /api/admin/sync/twitch` - Twitch同期実行
+- `POST /api/admin/sync/web` - Webスクレイピング実行
 - `POST /api/admin/ai-tagging` - AIタグづけ実行
 
 ## データベーススキーマ
@@ -222,8 +203,7 @@ npm run build
 
 - **vtubers**: VTuber基本情報
 - **youtube_channels**: YouTubeチャンネル情報
-- **twitter_accounts**: Twitterアカウント情報
-- **twitch_channels**: Twitchチャンネル情報
+- **web_profiles**: Webスクレイピングデータ
 - **tags**: タグマスター
 - **vtuber_tags**: VTuberとタグの関連
 - **streams**: 配信情報
@@ -239,11 +219,7 @@ Cloudflare Workers Cronを使用して、以下のタスクを定期実行でき
 ```toml
 # wrangler.tomlに追加
 [triggers]
-crons = [
-  "0 */6 * * *",  # 6時間ごとにYouTube同期
-  "0 */12 * * *", # 12時間ごとにTwitter同期
-  "0 0 * * *",    # 毎日AIタグづけ
-]
+crons = ["0 */6 * * *"]  # 6時間ごとに実行
 ```
 
 ## ライセンス

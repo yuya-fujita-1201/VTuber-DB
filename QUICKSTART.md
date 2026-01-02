@@ -7,8 +7,6 @@
 - Cloudflareアカウント（無料で作成可能）
 - 以下のAPIキー：
   - YouTube Data API v3キー
-  - Twitter/X API Bearer Token
-  - Twitch Client IDとClient Secret
   - OpenAI APIキー
 
 ## APIキーの取得方法
@@ -20,19 +18,6 @@
 3. 「APIとサービス」→「ライブラリ」から「YouTube Data API v3」を有効化
 4. 「認証情報」→「認証情報を作成」→「APIキー」を選択
 5. 生成されたAPIキーをコピー
-
-### Twitter/X API
-
-1. [Twitter Developer Portal](https://developer.twitter.com/)にアクセス
-2. アプリケーションを作成
-3. 「Keys and tokens」タブから「Bearer Token」を生成
-4. Bearer Tokenをコピー
-
-### Twitch API
-
-1. [Twitch Developer Console](https://dev.twitch.tv/console)にアクセス
-2. アプリケーションを登録
-3. Client IDとClient Secretをコピー
 
 ### OpenAI API
 
@@ -96,9 +81,6 @@ wrangler d1 execute vtuber-db --remote --file=./schema/seed_tags.sql
 
 ```bash
 echo "YOUR_YOUTUBE_API_KEY" | wrangler secret put YOUTUBE_API_KEY
-echo "YOUR_TWITTER_BEARER_TOKEN" | wrangler secret put TWITTER_BEARER_TOKEN
-echo "YOUR_TWITCH_CLIENT_ID" | wrangler secret put TWITCH_CLIENT_ID
-echo "YOUR_TWITCH_CLIENT_SECRET" | wrangler secret put TWITCH_CLIENT_SECRET
 echo "YOUR_OPENAI_API_KEY" | wrangler secret put OPENAI_API_KEY
 echo "YOUR_ADMIN_PASSWORD" | wrangler secret put ADMIN_PASSWORD
 ```
@@ -108,15 +90,6 @@ echo "YOUR_ADMIN_PASSWORD" | wrangler secret put ADMIN_PASSWORD
 ```bash
 wrangler secret put YOUTUBE_API_KEY
 # プロンプトでAPIキーを入力
-
-wrangler secret put TWITTER_BEARER_TOKEN
-# プロンプトでBearer Tokenを入力
-
-wrangler secret put TWITCH_CLIENT_ID
-# プロンプトでClient IDを入力
-
-wrangler secret put TWITCH_CLIENT_SECRET
-# プロンプトでClient Secretを入力
 
 wrangler secret put OPENAI_API_KEY
 # プロンプトでAPIキーを入力
@@ -184,7 +157,7 @@ curl -X POST https://vtuber-db.your-subdomain.workers.dev/api/youtube \
 
 管理者画面（`https://vtuber-db.pages.dev/admin`）にアクセスし、設定した管理者パスワードでログインします。
 
-「YouTube同期」「Twitter同期」「Twitch同期」ボタンをクリックして、登録されたチャンネル情報を更新します。
+「YouTube同期」ボタンをクリックして、登録されたチャンネル情報を更新します。
 
 ### AIタグづけの実行
 
@@ -225,7 +198,7 @@ wrangler secret put YOUTUBE_API_KEY
 ## 次のステップ
 
 1. **カスタムドメインの設定**: Cloudflare Pagesの設定からカスタムドメインを追加
-2. **定期実行の設定**: `wrangler.toml`にCron設定を追加してデータの自動更新を有効化
+2. **定期実行の設定**: データの自動更新が有効化されています（6時間ごと）
 3. **データの充実**: 管理者画面からVTuberを追加し、データベースを充実させる
 4. **パフォーマンス最適化**: KVキャッシュやR2ストレージを活用
 

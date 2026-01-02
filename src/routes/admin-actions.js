@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { syncYouTubeData, syncTwitterData, syncTwitchData } from '../workers/sync.js';
+import { syncYouTubeData, syncWebData } from '../workers/sync.js';
 import { runAITagging } from '../workers/ai-tagging.js';
 
 export const adminActionsRoutes = new Hono();
@@ -30,25 +30,14 @@ adminActionsRoutes.post('/sync/youtube', async (c) => {
   }
 });
 
-// Twitter同期実行
-adminActionsRoutes.post('/sync/twitter', async (c) => {
+// Webスクレイピング実行
+adminActionsRoutes.post('/sync/web', async (c) => {
   try {
-    const result = await syncTwitterData(c.env);
+    const result = await syncWebData(c.env);
     return c.json(result);
   } catch (error) {
-    console.error('Error running Twitter sync:', error);
-    return c.json({ error: 'Failed to run Twitter sync' }, 500);
-  }
-});
-
-// Twitch同期実行
-adminActionsRoutes.post('/sync/twitch', async (c) => {
-  try {
-    const result = await syncTwitchData(c.env);
-    return c.json(result);
-  } catch (error) {
-    console.error('Error running Twitch sync:', error);
-    return c.json({ error: 'Failed to run Twitch sync' }, 500);
+    console.error('Error running web scraping:', error);
+    return c.json({ error: 'Failed to run web scraping' }, 500);
   }
 });
 

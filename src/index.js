@@ -2,8 +2,7 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { vtuberRoutes } from './routes/vtubers';
 import { youtubeRoutes } from './routes/youtube';
-import { twitterRoutes } from './routes/twitter';
-import { twitchRoutes } from './routes/twitch';
+
 import { tagRoutes } from './routes/tags';
 import { adminRoutes } from './routes/admin';
 import { adminActionsRoutes } from './routes/admin-actions';
@@ -30,8 +29,7 @@ app.get('/', (c) => {
 // ルーティング
 app.route('/api/vtubers', vtuberRoutes);
 app.route('/api/youtube', youtubeRoutes);
-app.route('/api/twitter', twitterRoutes);
-app.route('/api/twitch', twitchRoutes);
+
 app.route('/api/tags', tagRoutes);
 app.route('/api/admin', adminRoutes);
 app.route('/api/admin', adminActionsRoutes);
