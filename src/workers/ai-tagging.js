@@ -33,11 +33,9 @@ export async function runAITagging(env, limit = 100) {
       .prepare(`
         SELECT v.*, 
                y.subscriber_count as youtube_subscribers,
-               t.follower_count as twitter_followers,
                COUNT(vt.tag_id) as tag_count
         FROM vtubers v
         LEFT JOIN youtube_channels y ON v.id = y.vtuber_id
-        LEFT JOIN twitter_accounts t ON v.id = t.vtuber_id
         LEFT JOIN vtuber_tags vt ON v.id = vt.vtuber_id
         GROUP BY v.id
         ORDER BY tag_count ASC, y.subscriber_count DESC
@@ -146,11 +144,9 @@ export async function runAITaggingForVTuber(env, vtuberId) {
     const { results: vtubers } = await db
       .prepare(`
         SELECT v.*, 
-               y.subscriber_count as youtube_subscribers,
-               t.follower_count as twitter_followers
+               y.subscriber_count as youtube_subscribers
         FROM vtubers v
         LEFT JOIN youtube_channels y ON v.id = y.vtuber_id
-        LEFT JOIN twitter_accounts t ON v.id = t.vtuber_id
         WHERE v.id = ?
       `)
       .bind(vtuberId)
@@ -215,11 +211,9 @@ export async function reevaluateVTuberTags(env, vtuberId) {
     const { results: vtubers } = await db
       .prepare(`
         SELECT v.*, 
-               y.subscriber_count as youtube_subscribers,
-               t.follower_count as twitter_followers
+               y.subscriber_count as youtube_subscribers
         FROM vtubers v
         LEFT JOIN youtube_channels y ON v.id = y.vtuber_id
-        LEFT JOIN twitter_accounts t ON v.id = t.vtuber_id
         WHERE v.id = ?
       `)
       .bind(vtuberId)
