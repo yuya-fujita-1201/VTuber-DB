@@ -12,7 +12,7 @@ function TagDetail() {
 
   const fetchTag = async () => {
     try {
-      const res = await fetch(`/api/tags/${id}`);
+      const res = await fetch(`${API_BASE_URL}/api/tags/${id}`);
       const data = await res.json();
       setTagData(data);
     } catch (error) {

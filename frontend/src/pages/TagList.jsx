@@ -11,7 +11,7 @@ function TagList() {
 
   const fetchTags = async () => {
     try {
-      const res = await fetch('/api/tags');
+      const res = await fetch(`${API_BASE_URL}/api/tags`);
       const data = await res.json();
       setTags(data.grouped || {});
     } catch (error) {

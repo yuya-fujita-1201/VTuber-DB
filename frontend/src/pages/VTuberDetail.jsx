@@ -12,7 +12,7 @@ function VTuberDetail() {
 
   const fetchVTuber = async () => {
     try {
-      const res = await fetch(`/api/vtubers/${id}`);
+      const res = await fetch(`${API_BASE_URL}/api/vtubers/${id}`);
       const data = await res.json();
       setVTuber(data);
     } catch (error) {
@@ -160,11 +160,10 @@ function VTuberDetail() {
                     <Link
                       key={tag.id}
                       to={`/tags/${tag.id}`}
-                      className={`px-3 py-1 rounded-full text-sm ${
-                        tag.is_verified
+                      className={`px-3 py-1 rounded-full text-sm ${tag.is_verified
                           ? 'bg-primary-100 text-primary-800'
                           : 'bg-gray-100 text-gray-800'
-                      }`}
+                        }`}
                     >
                       {tag.name}
                       {!tag.is_verified && ' *'}

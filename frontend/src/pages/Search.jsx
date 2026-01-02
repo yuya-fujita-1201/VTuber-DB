@@ -8,7 +8,7 @@ function Search() {
   const [minSubscribers, setMinSubscribers] = useState('');
   const [maxSubscribers, setMaxSubscribers] = useState('');
   const [sort, setSort] = useState('subscribers');
-  
+
   const [results, setResults] = useState([]);
   const [tags, setTags] = useState([]);
   const [agencies, setAgencies] = useState([]);
@@ -21,7 +21,7 @@ function Search() {
 
   const fetchTags = async () => {
     try {
-      const res = await fetch('/api/tags');
+      const res = await fetch(`${API_BASE_URL}/api/tags`);
       const data = await res.json();
       setTags(data.data || []);
     } catch (error) {
@@ -31,7 +31,7 @@ function Search() {
 
   const fetchAgencies = async () => {
     try {
-      const res = await fetch('/api/search/agencies');
+      const res = await fetch(`${API_BASE_URL}/api/search/agencies`);
       const data = await res.json();
       setAgencies(data.data || []);
     } catch (error) {
@@ -51,7 +51,7 @@ function Search() {
       params.append('sort', sort);
       params.append('limit', '50');
 
-      const res = await fetch(`/api/search?${params.toString()}`);
+      const res = await fetch(`${API_BASE_URL}/api/search?${params.toString()}`);
       const data = await res.json();
       setResults(data.data || []);
     } catch (error) {

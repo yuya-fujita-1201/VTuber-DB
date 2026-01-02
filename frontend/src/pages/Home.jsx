@@ -13,12 +13,12 @@ function Home() {
   const fetchData = async () => {
     try {
       // 統計情報取得
-      const statsRes = await fetch('/api/search/stats');
+      const statsRes = await fetch(`${API_BASE_URL}/api/search/stats`);
       const statsData = await statsRes.json();
       setStats(statsData);
 
       // 人気VTuber取得
-      const vtuberRes = await fetch('/api/vtubers?limit=12&sort=subscribers');
+      const vtuberRes = await fetch(`${API_BASE_URL}/api/vtubers?limit=12&sort=subscribers`);
       const vtuberData = await vtuberRes.json();
       setPopularVTubers(vtuberData.data || []);
     } catch (error) {
