@@ -1,0 +1,27 @@
+{
+  "name": "vtuber-db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuya-fujita-1201/VTuber-DB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuya-fujita-1201/VTuber-DB/issues"
+  },
+  "homepage": "https://github.com/yuya-fujita-1201/VTuber-DB#readme",
+  "description": "",
+  "devDependencies": {
+    "wrangler": "^4.54.0"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.7",
+    "hono": "^4.11.3"
+  }
+}

@@ -1,0 +1,23 @@
+name = "vtuber-db"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# D1 データベース
+[[d1_databases]]
+binding = "DB"
+database_name = "vtuber-db"
+database_id = "your-database-id-here"
+
+# 環境変数（ローカル開発用は .dev.vars に記載）
+[vars]
+ENVIRONMENT = "production"
+
+# R2 ストレージ（画像保存用）
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "vtuber-images"
+
+# KV（キャッシュ用）
+[[kv_namespaces]]
+binding = "CACHE"
+id = "your-kv-id-here"

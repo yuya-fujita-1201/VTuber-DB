@@ -1,0 +1,15 @@
+# YouTube Data API v3
+YOUTUBE_API_KEY=your_youtube_api_key_here
+
+# Twitter/X API v2
+TWITTER_BEARER_TOKEN=your_twitter_bearer_token_here
+
+# Twitch API
+TWITCH_CLIENT_ID=your_twitch_client_id_here
+TWITCH_CLIENT_SECRET=your_twitch_client_secret_here
+
+# OpenAI API (for AI tagging)
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Admin authentication
+ADMIN_PASSWORD=your_admin_password_here
