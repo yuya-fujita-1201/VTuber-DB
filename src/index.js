@@ -35,6 +35,26 @@ app.route('/api/tags', tagRoutes);
 app.route('/api/admin', adminRoutes);
 app.route('/api/admin', adminActionsRoutes);
 app.route('/api/search', searchRoutes);
+
+// 統計情報の直接ルート（/api/stats）
+app.get('/api/stats', async (c) => {
+  const db = c.env.DB;
+  try {
+    const { results: totalResults } = await db.prepare('SELECT COUNT(*) as total FROM vtubers').all();
+    const { results: agencyResults } = await db.prepare('SELECT COUNT(DISTINCT agency) as total FROM vtubers WHERE agency IS NOT NULL').all();
+    const { results: subscriberResults } = await db.prepare('SELECT SUM(subscriber_count) as total FROM youtube_channels').all();
+    const { results: tagResults } = await db.prepare('SELECT COUNT(*) as total FROM tags').all();
+    return c.json({
+      total_vtubers: totalResults[0]?.total || 0,
+      total_agencies: agencyResults[0]?.total || 0,
+      total_youtube_subscribers: subscriberResults[0]?.total || 0,
+      total_tags: tagResults[0]?.total || 0,
+    });
+  } catch (error) {
+    console.error('Error fetching stats:', error);
+    return c.json({ error: 'Failed to fetch stats' }, 500);
+  }
+});
 app.route('/api/bulk-import', bulkImportRoutes);
 
 // エラーハンドリング

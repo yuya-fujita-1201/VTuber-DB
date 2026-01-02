@@ -7,28 +7,26 @@ searchRoutes.get('/', async (c) => {
   const db = c.env.DB;
   const {
     q, // 検索キーワード
+    keyword, // 検索キーワード（別名）
     tags, // タグID（カンマ区切り）
     agency,
     min_subscribers,
     max_subscribers,
-    min_followers,
-    max_followers,
     sort = 'relevance',
     limit = 50,
     offset = 0,
   } = c.req.query();
 
+  // keywordパラメータもサポート
+  const searchKeyword = q || keyword;
+
   try {
     let query = `
       SELECT DISTINCT
         v.*,
-        y.subscriber_count as youtube_subscribers,
-        t.follower_count as twitter_followers,
-        tw.follower_count as twitch_followers
+        y.subscriber_count as youtube_subscribers
       FROM vtubers v
       LEFT JOIN youtube_channels y ON v.id = y.vtuber_id
-      LEFT JOIN twitter_accounts t ON v.id = t.vtuber_id
-      LEFT JOIN twitch_channels tw ON v.id = tw.vtuber_id
     `;
 
     const conditions = [];
@@ -45,9 +43,9 @@ searchRoutes.get('/', async (c) => {
     }
 
     // キーワード検索
-    if (q) {
+    if (searchKeyword) {
       conditions.push('(v.name LIKE ? OR v.name_en LIKE ? OR v.description LIKE ?)');
-      const searchTerm = `%${q}%`;
+      const searchTerm = `%${searchKeyword}%`;
       params.push(searchTerm, searchTerm, searchTerm);
     }
 
@@ -67,16 +65,6 @@ searchRoutes.get('/', async (c) => {
       params.push(parseInt(max_subscribers));
     }
 
-    // Twitterフォロワー数フィルター
-    if (min_followers) {
-      conditions.push('t.follower_count >= ?');
-      params.push(parseInt(min_followers));
-    }
-    if (max_followers) {
-      conditions.push('t.follower_count <= ?');
-      params.push(parseInt(max_followers));
-    }
-
     if (conditions.length > 0) {
       query += ' WHERE ' + conditions.join(' AND ');
     }
@@ -86,9 +74,6 @@ searchRoutes.get('/', async (c) => {
       case 'subscribers':
         query += ' ORDER BY y.subscriber_count DESC';
         break;
-      case 'followers':
-        query += ' ORDER BY t.follower_count DESC';
-        break;
       case 'debut':
         query += ' ORDER BY v.debut_date DESC';
         break;
@@ -97,7 +82,7 @@ searchRoutes.get('/', async (c) => {
         break;
       default:
         // relevance: キーワード検索時は名前の一致度、それ以外は登録者数
-        if (q) {
+        if (searchKeyword) {
           query += ' ORDER BY v.name ASC';
         } else {
           query += ' ORDER BY y.subscriber_count DESC';
@@ -119,7 +104,7 @@ searchRoutes.get('/', async (c) => {
     });
   } catch (error) {
     console.error('Error searching vtubers:', error);
-    return c.json({ error: 'Failed to search vtubers' }, 500);
+    return c.json({ error: 'Failed to search vtubers', message: error.message }, 500);
   }
 });
 
@@ -165,11 +150,6 @@ searchRoutes.get('/stats', async (c) => {
       .prepare('SELECT SUM(subscriber_count) as total FROM youtube_channels')
       .all();
 
-    // 総Twitterフォロワー数
-    const { results: followerResults } = await db
-      .prepare('SELECT SUM(follower_count) as total FROM twitter_accounts')
-      .all();
-
     // タグ数
     const { results: tagResults } = await db
       .prepare('SELECT COUNT(*) as total FROM tags')
@@ -179,7 +159,6 @@ searchRoutes.get('/stats', async (c) => {
       total_vtubers: totalResults[0]?.total || 0,
       total_agencies: agencyResults[0]?.total || 0,
       total_youtube_subscribers: subscriberResults[0]?.total || 0,
-      total_twitter_followers: followerResults[0]?.total || 0,
       total_tags: tagResults[0]?.total || 0,
     });
   } catch (error) {
