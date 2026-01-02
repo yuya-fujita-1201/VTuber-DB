@@ -6,7 +6,7 @@ compatibility_date = "2024-01-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "vtuber-db"
-database_id = "your-database-id-here"
+database_id = "e262a8e1-e214-4536-9a9f-81288b1668df"
 
 # 環境変数（ローカル開発用は .dev.vars に記載）
 [vars]
@@ -20,7 +20,7 @@ bucket_name = "vtuber-images"
 # KV（キャッシュ用）
 [[kv_namespaces]]
 binding = "CACHE"
-id = "your-kv-id-here"
+id = "05bfbf27ae194eadab654b229bb8224f"
 
 # Cron Triggers（定期実行）
 [triggers]
