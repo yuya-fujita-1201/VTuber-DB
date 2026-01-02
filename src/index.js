@@ -54,4 +54,14 @@ app.notFound((c) => {
   }, 404);
 });
 
-export default app;
+import { handleScheduled } from './scheduled.js';
+
+export default {
+  async fetch(request, env, ctx) {
+    return app.fetch(request, env, ctx);
+  },
+  
+  async scheduled(event, env, ctx) {
+    await handleScheduled(event, env, ctx);
+  },
+};

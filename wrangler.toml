@@ -21,3 +21,7 @@ bucket_name = "vtuber-images"
 [[kv_namespaces]]
 binding = "CACHE"
 id = "your-kv-id-here"
+
+# Cron Triggers（定期実行）
+[triggers]
+crons = ["0 */6 * * *"]  # 6時間ごとに実行
