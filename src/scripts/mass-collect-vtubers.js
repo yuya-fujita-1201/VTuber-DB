@@ -79,6 +79,9 @@ export async function massCollectVTubers(env, options = {}) {
       // YouTube検索（最大50件）
       const channels = await youtubeService.searchChannels(keyword, 50);
 
+      // API呼び出し間隔を確保（レート制限対策）
+      await new Promise(resolve => setTimeout(resolve, 200));
+
       // 新規チャンネルのみフィルタ
       const newChannels = channels.filter(
         ch => !existingChannelIds.has(ch.channel_id) && !collectedChannelIds.has(ch.channel_id)
@@ -164,6 +167,13 @@ export async function massCollectVTubers(env, options = {}) {
       await new Promise(resolve => setTimeout(resolve, 1000));
     } catch (error) {
       console.error(`[Mass Collect] Error searching for ${keyword}:`, error);
+      
+      // クォータ超過時は即座に停止
+      if (error.message && (error.message.includes('403') || error.message.includes('quotaExceeded'))) {
+        console.error('[Mass Collect] Quota exceeded. Stopping collection.');
+        break;
+      }
+      
       totalErrors++;
     }
   }
