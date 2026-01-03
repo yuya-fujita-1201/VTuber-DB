@@ -13,6 +13,8 @@ function DataCollection() {
   const [loading, setLoading] = useState(false);
   const [collecting, setCollecting] = useState(false);
   const [tagging, setTagging] = useState(false);
+  const [massCollecting, setMassCollecting] = useState(false);
+  const [massCollectTarget, setMassCollectTarget] = useState(1000);
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
 
@@ -133,6 +135,43 @@ function DataCollection() {
     }
   };
 
+  const handleMassCollect = async () => {
+    setMassCollecting(true);
+    setMessage('');
+    setError('');
+
+    try {
+      const res = await fetch('/api/admin/mass-collect', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          targetCount: massCollectTarget,
+        }),
+      });
+
+      if (res.status === 401) {
+        handleUnauthorized();
+        return;
+      }
+
+      if (!res.ok) {
+        throw new Error('大規模収集に失敗しました');
+      }
+
+      const data = await res.json();
+      setMessage(data.message || `${data.collected}件のVTuberを収集しました`);
+      fetchStats();
+    } catch (err) {
+      console.error('Error in mass collect:', err);
+      setError('大規模収集に失敗しました: ' + err.message);
+    } finally {
+      setMassCollecting(false);
+    }
+  };
+
   const handleBatchTag = async () => {
     setTagging(true);
     setMessage('');
@@ -236,6 +275,61 @@ function DataCollection() {
           {error}
         </div>
       )}
+
+      {/* 大規模収集 */}
+      <div className="card mb-8 bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          🚀 大規模収集（YouTube検索ベース）
+        </h2>
+        <p className="text-gray-600 mb-6">
+          30種類のキーワードでYouTubeを検索し、VTuberを大量に収集します。
+          個人勢や小規模事務所のVTuberも含まれます。
+        </p>
+
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              目標収集数
+            </label>
+            <input
+              type="number"
+              value={massCollectTarget}
+              onChange={(e) => setMassCollectTarget(parseInt(e.target.value))}
+              min="100"
+              max="2000"
+              step="100"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+            />
+            <p className="text-xs text-gray-500 mt-1">
+              ※最大2000件まで。既存のチャンネルはスキップされます。
+            </p>
+            <p className="text-xs text-gray-500 mt-1">
+              ※YouTube APIのクォータを消費します。大量収集は計画的に実行してください。
+            </p>
+          </div>
+
+          <button
+            onClick={handleMassCollect}
+            disabled={massCollecting}
+            className="btn btn-primary w-full text-lg py-3"
+          >
+            {massCollecting ? '収集中... 数分かかる場合があります' : `${massCollectTarget}件の大規模収集を実行`}
+          </button>
+
+          <div className="bg-white rounded-lg p-4 border border-purple-200">
+            <h3 className="font-semibold text-gray-900 mb-2">検索キーワード例：</h3>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">ホロライブ</span>
+              <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">にじさんじ</span>
+              <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">ぶいすぽ</span>
+              <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">個人勢VTuber</span>
+              <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">VTuber 歌ってみた</span>
+              <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">VTuber ゲーム実況</span>
+              <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">など30種類</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* バッチ収集 */}

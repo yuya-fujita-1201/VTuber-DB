@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
 import { batchCollectVTubers } from '../scripts/batch-collect-vtubers.js';
+import { massCollectVTubers } from '../scripts/mass-collect-vtubers.js';
 
 export const adminBatchRoutes = new Hono();
 
@@ -151,6 +152,37 @@ adminBatchRoutes.post('/batch-tag', async (c) => {
     });
   } catch (error) {
     console.error('Error in batch tag:', error);
+    return c.json({
+      success: false,
+      error: error.message,
+    }, 500);
+  }
+});
+
+// 大規模収集を実行（YouTube検索ベース）
+// POST /api/admin/mass-collect
+// body: { targetCount: 1000 }
+adminBatchRoutes.post('/mass-collect', async (c) => {
+  try {
+    const body = await c.req.json();
+    const { targetCount = 1000 } = body;
+
+    // 最大2000件まで
+    const safeTargetCount = Math.min(targetCount, 2000);
+
+    const result = await massCollectVTubers(c.env, {
+      targetCount: safeTargetCount,
+      batchSize: 50,
+      skipExisting: true,
+    });
+
+    return c.json({
+      success: true,
+      ...result,
+      message: `${result.collected}件のVTuberを収集しました（${result.keywords_used}キーワード使用）`,
+    });
+  } catch (error) {
+    console.error('Error in mass collect:', error);
     return c.json({
       success: false,
       error: error.message,
