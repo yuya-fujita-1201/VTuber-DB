@@ -161,11 +161,11 @@ adminBatchRoutes.post('/batch-tag', async (c) => {
 
 // 大規模収集を実行（YouTube検索ベース）
 // POST /api/admin/mass-collect
-// body: { targetCount: 1000 }
+// body: { targetCount: 1000, order: 'relevance' }
 adminBatchRoutes.post('/mass-collect', async (c) => {
   try {
     const body = await c.req.json();
-    const { targetCount = 1000 } = body;
+    const { targetCount = 1000, order = 'relevance' } = body;
 
     // 最大2000件まで
     const safeTargetCount = Math.min(targetCount, 2000);
@@ -174,6 +174,7 @@ adminBatchRoutes.post('/mass-collect', async (c) => {
       targetCount: safeTargetCount,
       batchSize: 50,
       skipExisting: true,
+      order: order,
     });
 
     return c.json({

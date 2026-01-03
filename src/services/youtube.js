@@ -51,11 +51,12 @@ export class YouTubeService {
    * チャンネル名で検索
    * @param {string} query - 検索クエリ
    * @param {number} maxResults - 最大結果数
+   * @param {string} order - 検索結果の並び順（relevance, date, viewCount）
    * @returns {Promise<Array>} チャンネル一覧
    */
-  async searchChannels(query, maxResults = 10) {
+  async searchChannels(query, maxResults = 10, order = 'relevance') {
     try {
-      const url = `${this.baseUrl}/search?part=snippet&type=channel&q=${encodeURIComponent(query)}&maxResults=${maxResults}&key=${this.apiKey}`;
+      const url = `${this.baseUrl}/search?part=snippet&type=channel&q=${encodeURIComponent(query)}&maxResults=${maxResults}&order=${order}&key=${this.apiKey}`;
       const response = await fetch(url);
       
       if (!response.ok) {
