@@ -16,6 +16,18 @@ export default {
       return new Response('Method Not Allowed', { status: 405 });
     }
 
+    // 認証チェック（テストモードではスキップ）
+    const testMode = request.headers.get('X-Test-Mode') === 'true';
+    if (!testMode) {
+      const adminToken = request.headers.get('X-Admin-Token');
+      if (!adminToken || adminToken !== env.ADMIN_TOKEN) {
+        return new Response(
+          JSON.stringify({ error: 'Unauthorized' }),
+          { status: 401, headers: { 'Content-Type': 'application/json' } }
+        );
+      }
+    }
+
     try {
       const { type } = await request.json();
 
