@@ -11,6 +11,9 @@ const SEARCH_KEYWORDS = [
   'バーチャルYouTuber',
   'Vtuber 自己紹介',
   'Vtuber デビュー',
+  '新人VTuber',
+  'VTuber 初配信',
+  '個人勢VTuber デビュー',
   'ホロライブ',
   'にじさんじ',
   'ぶいすぽ',
@@ -47,6 +50,7 @@ export async function massCollectVTubers(env, options = {}) {
     targetCount = 1000,
     batchSize = 50,
     skipExisting = true,
+    order = 'relevance',  // 'relevance', 'date', 'viewCount'
   } = options;
 
   const db = env.DB;
@@ -64,8 +68,10 @@ export async function massCollectVTubers(env, options = {}) {
   }
 
   const collectedChannelIds = new Set();
+  const skippedKeywords = new Set();
   let totalCollected = 0;
   let totalErrors = 0;
+  let totalSkipped = 0;
 
   // 各キーワードで検索
   for (const keyword of SEARCH_KEYWORDS) {
@@ -77,7 +83,7 @@ export async function massCollectVTubers(env, options = {}) {
 
     try {
       // YouTube検索（最大50件）
-      const channels = await youtubeService.searchChannels(keyword, 50);
+      const channels = await youtubeService.searchChannels(keyword, 50, order);
 
       // API呼び出し間隔を確保（レート制限対策）
       await new Promise(resolve => setTimeout(resolve, 200));
@@ -89,6 +95,8 @@ export async function massCollectVTubers(env, options = {}) {
 
       if (newChannels.length === 0) {
         console.log(`[Mass Collect] No new channels found for: ${keyword}`);
+        skippedKeywords.add(keyword);
+        totalSkipped++;
         continue;
       }
 
@@ -178,12 +186,18 @@ export async function massCollectVTubers(env, options = {}) {
     }
   }
 
-  console.log(`[Mass Collect] Completed: ${totalCollected} collected, ${totalErrors} errors`);
+  console.log(`[Mass Collect] Completed: ${totalCollected} collected, ${totalErrors} errors, ${totalSkipped} keywords skipped`);
+  
+  if (skippedKeywords.size > 0) {
+    console.log(`[Mass Collect] Skipped keywords: ${Array.from(skippedKeywords).join(', ')}`);
+  }
 
   return {
     collected: totalCollected,
     errors: totalErrors,
     keywords_used: SEARCH_KEYWORDS.length,
+    keywords_skipped: totalSkipped,
+    skipped_keywords: Array.from(skippedKeywords),
   };
 }
 

@@ -15,6 +15,7 @@ function DataCollection() {
   const [tagging, setTagging] = useState(false);
   const [massCollecting, setMassCollecting] = useState(false);
   const [massCollectTarget, setMassCollectTarget] = useState(1000);
+  const [massCollectOrder, setMassCollectOrder] = useState('relevance');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
 
@@ -149,6 +150,7 @@ function DataCollection() {
         },
         body: JSON.stringify({
           targetCount: massCollectTarget,
+          order: massCollectOrder,
         }),
       });
 
@@ -286,7 +288,7 @@ function DataCollection() {
           個人勢や小規模事務所のVTuberも含まれます。
         </p>
 
-        <div className="space-y-4">
+         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               目標収集数
@@ -301,9 +303,27 @@ function DataCollection() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg"
             />
             <p className="text-xs text-gray-500 mt-1">
-              ※最大2000件まで。既存のチャンネルはスキップされます。
+              推奨: 1000件（初回）、500件（追加）
             </p>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              検索順序
+            </label>
+            <select
+              value={massCollectOrder}
+              onChange={(e) => setMassCollectOrder(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+            >
+              <option value="relevance">関連度順（デフォルト）</option>
+              <option value="date">新しい順（新人発見）</option>
+              <option value="viewCount">再生回数順（人気順）</option>
+            </select>
             <p className="text-xs text-gray-500 mt-1">
+              新人発見には「新しい順」を推奨
+            </p>
+          </div>  <p className="text-xs text-gray-500 mt-1">
               ※YouTube APIのクォータを消費します。大量収集は計画的に実行してください。
             </p>
           </div>

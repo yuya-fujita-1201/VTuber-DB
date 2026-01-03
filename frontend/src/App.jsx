@@ -11,6 +11,7 @@ import JobMonitor from './pages/admin/JobMonitor';
 import IngestionRequests from './pages/admin/IngestionRequests';
 import TagEditor from './pages/admin/TagEditor';
 import DataCollection from './pages/admin/DataCollection';
+import Maintenance from './pages/admin/Maintenance';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="admin/ingestion-requests" element={<IngestionRequests />} />
         <Route path="admin/tags" element={<TagEditor />} />
         <Route path="admin/data-collection" element={<DataCollection />} />
+        <Route path="admin/maintenance" element={<Maintenance />} />
       </Route>
     </Routes>
   );
