@@ -211,3 +211,55 @@ export class YouTubeService {
     }
   }
 }
+
+  /**
+   * チャンネルの動画を詳細情報付きで取得
+   * @param {string} channelId - YouTubeチャンネルID
+   * @param {number} maxResults - 最大結果数
+   * @returns {Promise<Array>} 動画詳細情報の配列
+   */
+  async getChannelVideos(channelId, maxResults = 5) {
+    try {
+      // ステップ1: 動画IDを取得
+      const searchUrl = `${this.baseUrl}/search?part=snippet&channelId=${channelId}&order=date&type=video&maxResults=${maxResults}&key=${this.apiKey}`;
+      const searchResponse = await fetch(searchUrl);
+      
+      if (!searchResponse.ok) {
+        throw new Error(`YouTube API error: ${searchResponse.status}`);
+      }
+
+      const searchData = await searchResponse.json();
+      
+      if (!searchData.items || searchData.items.length === 0) {
+        return [];
+      }
+
+      const videoIds = searchData.items.map(item => item.id.videoId).join(',');
+
+      // ステップ2: 動画の詳細情報を取得
+      const videosUrl = `${this.baseUrl}/videos?part=snippet,statistics,contentDetails&id=${videoIds}&key=${this.apiKey}`;
+      const videosResponse = await fetch(videosUrl);
+      
+      if (!videosResponse.ok) {
+        throw new Error(`YouTube API error: ${videosResponse.status}`);
+      }
+
+      const videosData = await videosResponse.json();
+      
+      return videosData.items.map(item => ({
+        video_id: item.id,
+        title: item.snippet.title,
+        description: item.snippet.description,
+        published_at: item.snippet.publishedAt,
+        view_count: parseInt(item.statistics.viewCount || 0),
+        like_count: parseInt(item.statistics.likeCount || 0),
+        comment_count: parseInt(item.statistics.commentCount || 0),
+        duration: item.contentDetails.duration,
+        thumbnail_url: item.snippet.thumbnails?.high?.url || null,
+      }));
+    } catch (error) {
+      console.error('Error fetching channel videos:', error);
+      throw error;
+    }
+  }
+}
