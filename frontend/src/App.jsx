@@ -7,6 +7,9 @@ import VTuberDetail from './pages/VTuberDetail';
 import TagList from './pages/TagList';
 import TagDetail from './pages/TagDetail';
 import Admin from './pages/Admin';
+import JobMonitor from './pages/admin/JobMonitor';
+import IngestionRequests from './pages/admin/IngestionRequests';
+import TagEditor from './pages/admin/TagEditor';
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path="tags" element={<TagList />} />
         <Route path="tags/:id" element={<TagDetail />} />
         <Route path="admin" element={<Admin />} />
+        <Route path="admin/jobs" element={<JobMonitor />} />
+        <Route path="admin/ingestion-requests" element={<IngestionRequests />} />
+        <Route path="admin/tags" element={<TagEditor />} />
       </Route>
     </Routes>
   );
