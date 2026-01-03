@@ -1,0 +1,2536 @@
+{
+  "agencies": [
+    {
+      "name": "ホロライブ",
+      "name_en": "hololive",
+      "divisions": [
+        {
+          "name": "ホロライブJP",
+          "name_en": "hololive-jp",
+          "channels": [
+            {
+              "name": "赤井はあと",
+              "channel_id": "UC1CfXB_kRs3C-zaeTG3oGyg",
+              "channel_url": "https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg"
+            },
+            {
+              "name": "アキ・ローゼンタール",
+              "channel_id": "UCFTLzh12_nrtzqBPsTCqenA",
+              "channel_url": "https://www.youtube.com/channel/UCFTLzh12_nrtzqBPsTCqenA"
+            },
+            {
+              "name": "【卒業生】 天音かなた",
+              "channel_id": "UCZlDXzGoo7d44bwdNObFacg",
+              "channel_url": "https://www.youtube.com/channel/UCZlDXzGoo7d44bwdNObFacg"
+            },
+            {
+              "name": "AZKi",
+              "channel_id": "UC0TXe_LYZ4scaW2XMyi5_kw",
+              "channel_url": "https://www.youtube.com/channel/UC0TXe_LYZ4scaW2XMyi5_kw"
+            },
+            {
+              "name": "博衣こより",
+              "channel_id": "UC6eWCld0KwmyHFbAqK3V-Rw",
+              "channel_url": "https://www.youtube.com/channel/UC6eWCld0KwmyHFbAqK3V-Rw"
+            },
+            {
+              "name": "姫森ルーナ",
+              "channel_id": "UCa9Y57gfeY0Zro_noHRVrnw",
+              "channel_url": "https://www.youtube.com/channel/UCa9Y57gfeY0Zro_noHRVrnw"
+            },
+            {
+              "name": "【卒業生】 火威青",
+              "channel_id": "UCMGfV7TVTmHhEErVJg1oHBQ",
+              "channel_url": "https://www.youtube.com/channel/UCMGfV7TVTmHhEErVJg1oHBQ"
+            },
+            {
+              "name": "星街すいせい",
+              "channel_id": "UC5CwaMl1eIgY8h02uZw7u8A",
+              "channel_url": "https://www.youtube.com/channel/UC5CwaMl1eIgY8h02uZw7u8A"
+            },
+            {
+              "name": "宝鐘マリン",
+              "channel_id": "UCCzUftO8KOVkV4wQG1vkUvg",
+              "channel_url": "https://www.youtube.com/channel/UCCzUftO8KOVkV4wQG1vkUvg"
+            },
+            {
+              "name": "一条莉々華",
+              "channel_id": "UC10wVt6hoQiwySRhz7RdOUA",
+              "channel_url": "https://www.youtube.com/channel/UC10wVt6hoQiwySRhz7RdOUA"
+            },
+            {
+              "name": "戌神ころね",
+              "channel_id": "UChAnqc_AY5_I3Px5dig3X1Q",
+              "channel_url": "https://www.youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q"
+            },
+            {
+              "name": "響咲リオナ",
+              "channel_id": "UC9LSiN9hXI55svYEBrrK-tw",
+              "channel_url": "https://www.youtube.com/channel/UC9LSiN9hXI55svYEBrrK-tw"
+            },
+            {
+              "name": "儒烏風亭らでん",
+              "channel_id": "UCJFZiqLMntJufDCHc6bQixg",
+              "channel_url": "https://www.youtube.com/channel/UCJFZiqLMntJufDCHc6bQixg"
+            },
+            {
+              "name": "風真いろは",
+              "channel_id": "UC_vMYWcDjmfdpH6r4TTn1MQ",
+              "channel_url": "https://www.youtube.com/channel/UC_vMYWcDjmfdpH6r4TTn1MQ"
+            },
+            {
+              "name": "綺々羅々ヴィヴィ",
+              "channel_id": "UCGzTVXqMQHa4AgJVJIVvtDQ",
+              "channel_url": "https://www.youtube.com/channel/UCGzTVXqMQHa4AgJVJIVvtDQ"
+            },
+            {
+              "name": "【卒業生】 桐生ココ",
+              "channel_id": "UCS9uQI-jC3DE0L4IpXyvr6w",
+              "channel_url": "https://www.youtube.com/channel/UCS9uQI-jC3DE0L4IpXyvr6w"
+            },
+            {
+              "name": "虎金妃笑虎",
+              "channel_id": "UCuI_opAVX6qbxZY-a-AxFuQ",
+              "channel_url": "https://www.youtube.com/channel/UCuI_opAVX6qbxZY-a-AxFuQ"
+            },
+            {
+              "name": "ラプラス・ダークネス",
+              "channel_id": "UCENwRMx5Yh42zWpzURebzTw",
+              "channel_url": "https://www.youtube.com/channel/UCENwRMx5Yh42zWpzURebzTw"
+            },
+            {
+              "name": "【卒業生】 湊あくあ",
+              "channel_id": "UC1opHUrw8rvnsadT-iGp7Cg",
+              "channel_url": "https://www.youtube.com/channel/UC1opHUrw8rvnsadT-iGp7Cg"
+            },
+            {
+              "name": "水宮枢",
+              "channel_id": "UCjk2nKmHzgH5Xy-C5qYRd5A",
+              "channel_url": "https://www.youtube.com/channel/UCjk2nKmHzgH5Xy-C5qYRd5A"
+            },
+            {
+              "name": "桃鈴ねね",
+              "channel_id": "UCAWSyEs_Io8MtpY3m-zqILA",
+              "channel_url": "https://www.youtube.com/channel/UCAWSyEs_Io8MtpY3m-zqILA"
+            },
+            {
+              "name": "【卒業生】 紫咲シオン",
+              "channel_id": "UCXTpFs_3PqI41qX2d9tL2Rw",
+              "channel_url": "https://www.youtube.com/channel/UCXTpFs_3PqI41qX2d9tL2Rw"
+            },
+            {
+              "name": "百鬼あやめ",
+              "channel_id": "UC7fk0CB07ly8oSl0aqKkqFg",
+              "channel_url": "https://www.youtube.com/channel/UC7fk0CB07ly8oSl0aqKkqFg"
+            },
+            {
+              "name": "夏色まつり",
+              "channel_id": "UCJFZiqLMntJufDCHc6bQixg",
+              "channel_url": "https://www.youtube.com/channel/UCJFZiqLMntJufDCHc6bQixg"
+            },
+            {
+              "name": "猫又おかゆ",
+              "channel_id": "UCvaTdHTWBGv3MKj3KVqJVCw",
+              "channel_url": "https://www.youtube.com/channel/UCvaTdHTWBGv3MKj3KVqJVCw"
+            },
+            {
+              "name": "尾丸ポルカ",
+              "channel_id": "UCK9V2B22uJYu3N7eR_BT9QA",
+              "channel_url": "https://www.youtube.com/channel/UCK9V2B22uJYu3N7eR_BT9QA"
+            },
+            {
+              "name": "大神ミオ",
+              "channel_id": "UCp-5t9SrOQwXMU7iIjQfARg",
+              "channel_url": "https://www.youtube.com/channel/UCp-5t9SrOQwXMU7iIjQfARg"
+            },
+            {
+              "name": "大空スバル",
+              "channel_id": "UCvzGlP9oQwU--Y0r9id_jnA",
+              "channel_url": "https://www.youtube.com/channel/UCvzGlP9oQwU--Y0r9id_jnA"
+            },
+            {
+              "name": "音乃瀬奏",
+              "channel_id": "UCJFZiqLMntJufDCHc6bQixg",
+              "channel_url": "https://www.youtube.com/channel/UCJFZiqLMntJufDCHc6bQixg"
+            },
+            {
+              "name": "輪堂千速",
+              "channel_id": "UCKMWFR6lAstLa7Vbf5dH7ig",
+              "channel_url": "https://www.youtube.com/channel/UCKMWFR6lAstLa7Vbf5dH7ig"
+            },
+            {
+              "name": "ロボ子さん",
+              "channel_id": "UCDqI2jOz0weumE8s7paEk6g",
+              "channel_url": "https://www.youtube.com/channel/UCDqI2jOz0weumE8s7paEk6g"
+            },
+            {
+              "name": "【配信活動終了】 沙花叉クロヱ",
+              "channel_id": "UCIBY1ollUsauvVi4hW4cumw",
+              "channel_url": "https://www.youtube.com/channel/UCIBY1ollUsauvVi4hW4cumw"
+            },
+            {
+              "name": "さくらみこ",
+              "channel_id": "UC-hM6YJuNYVAmUWxeIr9FeA",
+              "channel_url": "https://www.youtube.com/channel/UC-hM6YJuNYVAmUWxeIr9FeA"
+            },
+            {
+              "name": "白上フブキ",
+              "channel_id": "UCdn5BQ06XqgXoAxIhbqw5Rg",
+              "channel_url": "https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg"
+            },
+            {
+              "name": "不知火フレア",
+              "channel_id": "UCvInZx9h3jC2JzsIzoOebWg",
+              "channel_url": "https://www.youtube.com/channel/UCvInZx9h3jC2JzsIzoOebWg"
+            },
+            {
+              "name": "白銀ノエル",
+              "channel_id": "UCdyqAaZDKHXg4Ahi7VENThQ",
+              "channel_url": "https://www.youtube.com/channel/UCdyqAaZDKHXg4Ahi7VENThQ"
+            },
+            {
+              "name": "獅白ぼたん",
+              "channel_id": "UCUKD-uaobj9jiqB-VXt71mA",
+              "channel_url": "https://www.youtube.com/channel/UCUKD-uaobj9jiqB-VXt71mA"
+            },
+            {
+              "name": "鷹嶺ルイ",
+              "channel_id": "UCs9_O1tRPMQTHQ-N_L6FU2g",
+              "channel_url": "https://www.youtube.com/channel/UCs9_O1tRPMQTHQ-N_L6FU2g"
+            },
+            {
+              "name": "轟はじめ",
+              "channel_id": "UC10wVt6hoQiwySRhz7RdOUA",
+              "channel_url": "https://www.youtube.com/channel/UC10wVt6hoQiwySRhz7RdOUA"
+            },
+            {
+              "name": "ときのそら",
+              "channel_id": "UCp6993wxpyDPHUpavwDFqgg",
+              "channel_url": "https://www.youtube.com/channel/UCp6993wxpyDPHUpavwDFqgg"
+            },
+            {
+              "name": "常闇トワ",
+              "channel_id": "UC1uv2Oq6kNxgATlCiez59hw",
+              "channel_url": "https://www.youtube.com/channel/UC1uv2Oq6kNxgATlCiez59hw"
+            },
+            {
+              "name": "角巻わため",
+              "channel_id": "UCqm3BQLlJfvkTsX_hvm0UmA",
+              "channel_url": "https://www.youtube.com/channel/UCqm3BQLlJfvkTsX_hvm0UmA"
+            },
+            {
+              "name": "兎田ぺこら",
+              "channel_id": "UC1DCedRgGHBdm81E1llLhOQ",
+              "channel_url": "https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ"
+            },
+            {
+              "name": "雪花ラミィ",
+              "channel_id": "UCFKOVgVbGmX65RxO3EtH3iw",
+              "channel_url": "https://www.youtube.com/channel/UCFKOVgVbGmX65RxO3EtH3iw"
+            },
+            {
+              "name": "癒月ちょこ",
+              "channel_id": "UC1suqwovbL1kzsoaZgFZLKg",
+              "channel_url": "https://www.youtube.com/channel/UC1suqwovbL1kzsoaZgFZLKg"
+            }
+          ]
+        },
+        {
+          "name": "ホロライブEN",
+          "name_en": "hololive-en",
+          "channels": [
+            {
+              "name": "セシリア・イマーグリーン",
+              "channel_id": "UCvN5h1ShZtc7nly3pezRayg",
+              "channel_url": "https://www.youtube.com/channel/UCvN5h1ShZtc7nly3pezRayg"
+            },
+            {
+              "name": "【卒業生】 セレス・ファウナ",
+              "channel_id": "UCO_aKKYxn4tvrqPjcTzZ6EQ",
+              "channel_url": "https://www.youtube.com/channel/UCO_aKKYxn4tvrqPjcTzZ6EQ"
+            },
+            {
+              "name": "エリザベス・ローズ・ブラッドフレイム",
+              "channel_id": "UCW5uhrG1eCBYditmhL0Ykjw",
+              "channel_url": "https://www.youtube.com/channel/UCW5uhrG1eCBYditmhL0Ykjw"
+            },
+            {
+              "name": "フワワ・アビスガード",
+              "channel_id": "UCt9H_RpQzhxzlyBxFqrdHqA",
+              "channel_url": "https://www.youtube.com/channel/UCt9H_RpQzhxzlyBxFqrdHqA"
+            },
+            {
+              "name": "【卒業生】 がうる・ぐら",
+              "channel_id": "UCoSrY_IQQVpmIRZ9Xf-y93g",
+              "channel_url": "https://www.youtube.com/channel/UCoSrY_IQQVpmIRZ9Xf-y93g"
+            },
+            {
+              "name": "ジジ・ムリン",
+              "channel_id": "UCDHABijvPBnJm7F-KlNME3w",
+              "channel_url": "https://www.youtube.com/channel/UCDHABijvPBnJm7F-KlNME3w"
+            },
+            {
+              "name": "ハコス・ベールズ",
+              "channel_id": "UCgmPnx-EEeOrZSg5Tiw7ZRQ",
+              "channel_url": "https://www.youtube.com/channel/UCgmPnx-EEeOrZSg5Tiw7ZRQ"
+            },
+            {
+              "name": "IRyS",
+              "channel_id": "UC8rcEBzJSleTkf_-agPM20g",
+              "channel_url": "https://www.youtube.com/channel/UC8rcEBzJSleTkf_-agPM20g"
+            },
+            {
+              "name": "古石ビジュー",
+              "channel_id": "UC9p_lqQ0FEDz327Vgf5JwqA",
+              "channel_url": "https://www.youtube.com/channel/UC9p_lqQ0FEDz327Vgf5JwqA"
+            },
+            {
+              "name": "モココ・アビスガード",
+              "channel_id": "UCt9H_RpQzhxzlyBxFqrdHqA",
+              "channel_url": "https://www.youtube.com/channel/UCt9H_RpQzhxzlyBxFqrdHqA"
+            },
+            {
+              "name": "森カリオペ",
+              "channel_id": "UCL_qhgtOy0dy1Agp8vkySQg",
+              "channel_url": "https://www.youtube.com/channel/UCL_qhgtOy0dy1Agp8vkySQg"
+            },
+            {
+              "name": "【卒業生】 七詩ムメイ",
+              "channel_id": "UC3n5uGu18FoCy23ggWWp8tA",
+              "channel_url": "https://www.youtube.com/channel/UC3n5uGu18FoCy23ggWWp8tA"
+            },
+            {
+              "name": "ネリッサ・レイヴンクロフト",
+              "channel_id": "UC_sFNM0z0MWm9A6WlKPuMMg",
+              "channel_url": "https://www.youtube.com/channel/UC_sFNM0z0MWm9A6WlKPuMMg"
+            },
+            {
+              "name": "一伊那尓栖",
+              "channel_id": "UCMwGHR0BTZuLsmjY_NT5Pwg",
+              "channel_url": "https://www.youtube.com/channel/UCMwGHR0BTZuLsmjY_NT5Pwg"
+            },
+            {
+              "name": "オーロ・クロニー",
+              "channel_id": "UCmbs8T6MWqUHP1tIQvSgKrg",
+              "channel_url": "https://www.youtube.com/channel/UCmbs8T6MWqUHP1tIQvSgKrg"
+            },
+            {
+              "name": "ラオーラ・パンテーラ",
+              "channel_id": "UCl69AEx4MdqMZH7Jtsm7Tig",
+              "channel_url": "https://www.youtube.com/channel/UCl69AEx4MdqMZH7Jtsm7Tig"
+            },
+            {
+              "name": "シオリ・ノヴェラ",
+              "channel_id": "UCgnfPPb9JI3e9A4cXHnWbyg",
+              "channel_url": "https://www.youtube.com/channel/UCgnfPPb9JI3e9A4cXHnWbyg"
+            },
+            {
+              "name": "小鳥遊キアラ",
+              "channel_id": "UCHsx4Hqa-1ORjQTh9TYDhww",
+              "channel_url": "https://www.youtube.com/channel/UCHsx4Hqa-1ORjQTh9TYDhww"
+            },
+            {
+              "name": "【卒業生】 九十九佐命",
+              "channel_id": "UCsUj0dszADCGbF3gNrQEuSQ",
+              "channel_url": "https://www.youtube.com/channel/UCsUj0dszADCGbF3gNrQEuSQ"
+            },
+            {
+              "name": "【配信活動終了】 ワトソン・アメリア",
+              "channel_id": "UCyl1z3jo3XHR1riLFKG5UAg",
+              "channel_url": "https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"
+            }
+          ]
+        },
+        {
+          "name": "ホロライブID",
+          "name_en": "hololive-id",
+          "channels": [
+            {
+              "name": "アイラニ・イオフィフティーン",
+              "channel_id": "UCAoy6rzhSf4ydcYjJw3WoVg",
+              "channel_url": "https://www.youtube.com/channel/UCAoy6rzhSf4ydcYjJw3WoVg"
+            },
+            {
+              "name": "アーニャ・メルフィッサ",
+              "channel_id": "UC727SQYUvx5pDDGQpTICNWg",
+              "channel_url": "https://www.youtube.com/channel/UC727SQYUvx5pDDGQpTICNWg"
+            },
+            {
+              "name": "アユンダ・リス",
+              "channel_id": "UCOyYb1c43VlX9rc_lT6NKQw",
+              "channel_url": "https://www.youtube.com/channel/UCOyYb1c43VlX9rc_lT6NKQw"
+            },
+            {
+              "name": "カエラ・コヴァルスキア",
+              "channel_id": "UCZLZ8Jjx_RN2CXloOmgTHVg",
+              "channel_url": "https://www.youtube.com/channel/UCZLZ8Jjx_RN2CXloOmgTHVg"
+            },
+            {
+              "name": "こぼ・かなえる",
+              "channel_id": "UCjLEmnpCNeisMxy134KPwWw",
+              "channel_url": "https://www.youtube.com/channel/UCjLEmnpCNeisMxy134KPwWw"
+            },
+            {
+              "name": "クレイジー・オリー",
+              "channel_id": "UCYz_5n-uDuChHtLo7My1HnQ",
+              "channel_url": "https://www.youtube.com/channel/UCYz_5n-uDuChHtLo7My1HnQ"
+            },
+            {
+              "name": "ムーナ・ホシノヴァ",
+              "channel_id": "UCP0BspO_AMEe3aQqqpo89Dg",
+              "channel_url": "https://www.youtube.com/channel/UCP0BspO_AMEe3aQqqpo89Dg"
+            },
+            {
+              "name": "パヴォリア・レイネ",
+              "channel_id": "UChgTyjG-pdNvxxhdsXfHQ5Q",
+              "channel_url": "https://www.youtube.com/channel/UChgTyjG-pdNvxxhdsXfHQ5Q"
+            },
+            {
+              "name": "ベスティア・ゼータ",
+              "channel_id": "UCTvHWSfBZgtxE4sILOaurIQ",
+              "channel_url": "https://www.youtube.com/channel/UCTvHWSfBZgtxE4sILOaurIQ"
+            }
+          ]
+        },
+        {
+          "name": "ホロスターズ",
+          "name_en": "holostars",
+          "channels": [
+            {
+              "name": "荒咬オウガ",
+              "channel_id": "UCwL7dgTxKo8Y4RFIKWaf8gA",
+              "channel_url": "https://www.youtube.com/channel/UCwL7dgTxKo8Y4RFIKWaf8gA"
+            },
+            {
+              "name": "アルランディス",
+              "channel_id": "UCKeAhJvy8zgXWbh9duVjIaQ",
+              "channel_url": "https://www.youtube.com/channel/UCKeAhJvy8zgXWbh9duVjIaQ"
+            },
+            {
+              "name": "アステル・レダ",
+              "channel_id": "UCNVEsYbiZjH5QLmGeSgTSzg",
+              "channel_url": "https://www.youtube.com/channel/UCNVEsYbiZjH5QLmGeSgTSzg"
+            },
+            {
+              "name": "アクセル・シリオス",
+              "channel_id": "UC2hx0xVkMoHGWijwr_lA01w",
+              "channel_url": "https://www.youtube.com/channel/UC2hx0xVkMoHGWijwr_lA01w"
+            },
+            {
+              "name": "ガビス・ベッテル",
+              "channel_id": "UCHP4f7G2dWD4qib7BMatGAw",
+              "channel_url": "https://www.youtube.com/channel/UCHP4f7G2dWD4qib7BMatGAw"
+            },
+            {
+              "name": "クリムゾン・ルーズ",
+              "channel_id": "UCajbFh6e_R8QZdHAMbbi4rQ",
+              "channel_url": "https://www.youtube.com/channel/UCajbFh6e_R8QZdHAMbbi4rQ"
+            },
+            {
+              "name": "マキナ・X・フレオン",
+              "channel_id": "UC060r4zABV18vcahAWR1n7w",
+              "channel_url": "https://www.youtube.com/channel/UC060r4zABV18vcahAWR1n7w"
+            },
+            {
+              "name": "ゴールドブレット",
+              "channel_id": "UCWsfcksUUpoEvhia0_ut0bA",
+              "channel_url": "https://www.youtube.com/channel/UCWsfcksUUpoEvhia0_ut0bA"
+            },
+            {
+              "name": "万象院ハッカ",
+              "channel_id": "UC7gxU6NXjKF1LrgOddPzgTw",
+              "channel_url": "https://www.youtube.com/channel/UC7gxU6NXjKF1LrgOddPzgTw"
+            },
+            {
+              "name": "花咲みやび",
+              "channel_id": "UC6t3-_N8A6ME1JShZHHqOMw",
+              "channel_url": "https://www.youtube.com/channel/UC6t3-_N8A6ME1JShZHHqOMw"
+            },
+            {
+              "name": "ジュラルド・ティー・レクスフォード",
+              "channel_id": "UCWsfcksUUpoEvhia0_ut0bA",
+              "channel_url": "https://www.youtube.com/channel/UCWsfcksUUpoEvhia0_ut0bA"
+            },
+            {
+              "name": "【卒業】鏡見キラ",
+              "channel_id": "UCEzsociuFqVwgZuMaZqaCsg",
+              "channel_url": "https://www.youtube.com/channel/UCEzsociuFqVwgZuMaZqaCsg"
+            },
+            {
+              "name": "影山シエン",
+              "channel_id": "UChSvpZYRPh0FvG4SJGSga3g",
+              "channel_url": "https://www.youtube.com/channel/UChSvpZYRPh0FvG4SJGSga3g"
+            },
+            {
+              "name": "奏手イヅル",
+              "channel_id": "UCZgOv3YDEs-ZnZWDYVwJdmA",
+              "channel_url": "https://www.youtube.com/channel/UCZgOv3YDEs-ZnZWDYVwJdmA"
+            },
+            {
+              "name": "岸堂天真",
+              "channel_id": "UCGNI4MENvnsymYjKiZwv9eg",
+              "channel_url": "https://www.youtube.com/channel/UCGNI4MENvnsymYjKiZwv9eg"
+            },
+            {
+              "name": "【卒業】マグニ・デズモンド",
+              "channel_id": "UC7MMNHR-kf9EN1rXiesMTMw",
+              "channel_url": "https://www.youtube.com/channel/UC7MMNHR-kf9EN1rXiesMTMw"
+            },
+            {
+              "name": "水無世燐央",
+              "channel_id": "UCdfMHxjcCc2HSd9qFvfJgjg",
+              "channel_url": "https://www.youtube.com/channel/UCdfMHxjcCc2HSd9qFvfJgjg"
+            },
+            {
+              "name": "【卒業】ノワール・ヴェスパー",
+              "channel_id": "UCDRWSO281bIHYVi-OV3iFYA",
+              "channel_url": "https://www.youtube.com/channel/UCDRWSO281bIHYVi-OV3iFYA"
+            },
+            {
+              "name": "オクタビオ",
+              "channel_id": "UCLk1hcmxg8rJ3Nm1_GvxTRA",
+              "channel_url": "https://www.youtube.com/channel/UCLk1hcmxg8rJ3Nm1_GvxTRA"
+            },
+            {
+              "name": "リージス・アルテア",
+              "channel_id": "UCyxtGMdWlURZ30WSnEjDOQw",
+              "channel_url": "https://www.youtube.com/channel/UCyxtGMdWlURZ30WSnEjDOQw"
+            },
+            {
+              "name": "律可",
+              "channel_id": "UC9mf_ZVpouoILRY9NUIaK-w",
+              "channel_url": "https://www.youtube.com/channel/UC9mf_ZVpouoILRY9NUIaK-w"
+            },
+            {
+              "name": "定水寺シンリ",
+              "channel_id": "UCMqGG8BRAiI1lJfKOpETM_w",
+              "channel_url": "https://www.youtube.com/channel/UCMqGG8BRAiI1lJfKOpETM_w"
+            },
+            {
+              "name": "羽継烏有",
+              "channel_id": "UCgRqGV1gBf2Esxh0Tz1vxzw",
+              "channel_url": "https://www.youtube.com/channel/UCgRqGV1gBf2Esxh0Tz1vxzw"
+            },
+            {
+              "name": "夜十神封魔",
+              "channel_id": "UCc88OV45ICgHbn3ZqLLb52w",
+              "channel_url": "https://www.youtube.com/channel/UCc88OV45ICgHbn3ZqLLb52w"
+            },
+            {
+              "name": "夕刻ロベル",
+              "channel_id": "UCANDOlYTJT7N5jlRC3zfzVA",
+              "channel_url": "https://www.youtube.com/channel/UCANDOlYTJT7N5jlRC3zfzVA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "にじさんじ",
+      "name_en": "nijisanji",
+      "divisions": [
+        {
+          "name": "にじさんじJP",
+          "name_en": "nijisanji-jp",
+          "channels": [
+            {
+              "name": "葛葉",
+              "channel_id": "UCSFCh5NL4qXrAy9u-u2lX3g",
+              "channel_url": "https://www.youtube.com/channel/UCSFCh5NL4qXrAy9u-u2lX3g"
+            },
+            {
+              "name": "壱百満天原サロメ",
+              "channel_id": "UCgIfLpQvelloDi8I0Ycbwpg",
+              "channel_url": "https://www.youtube.com/channel/UCgIfLpQvelloDi8I0Ycbwpg"
+            },
+            {
+              "name": "叶",
+              "channel_id": "UCspv01oxUFf_MTSipURRhkA",
+              "channel_url": "https://www.youtube.com/channel/UCspv01oxUFf_MTSipURRhkA"
+            },
+            {
+              "name": "月ノ美兎",
+              "channel_id": "UCD-miitqNY3nyukJ4Fnf4_A",
+              "channel_url": "https://www.youtube.com/channel/UCD-miitqNY3nyukJ4Fnf4_A"
+            },
+            {
+              "name": "剣持刀也",
+              "channel_id": "UCv1fFr156jc65EMiLbaLImw",
+              "channel_url": "https://www.youtube.com/channel/UCv1fFr156jc65EMiLbaLImw"
+            },
+            {
+              "name": "星川サラ",
+              "channel_id": "UC9V3Y3_uzU5e-usObb6IE1w",
+              "channel_url": "https://www.youtube.com/channel/UC9V3Y3_uzU5e-usObb6IE1w"
+            },
+            {
+              "name": "不破湊",
+              "channel_id": "UC6wvdADTJ88OfIbJYIpAaDA",
+              "channel_url": "https://www.youtube.com/channel/UC6wvdADTJ88OfIbJYIpAaDA"
+            },
+            {
+              "name": "樋口楓",
+              "channel_id": "UCsg-YqdqQ-KFF0LNk23BY4A",
+              "channel_url": "https://www.youtube.com/channel/UCsg-YqdqQ-KFF0LNk23BY4A"
+            },
+            {
+              "name": "リゼ・ヘルエスタ",
+              "channel_id": "UCZ1xuCK1kNmn5RzPYIZop3w",
+              "channel_url": "https://www.youtube.com/channel/UCZ1xuCK1kNmn5RzPYIZop3w"
+            },
+            {
+              "name": "ローレン・イロアス",
+              "channel_id": "UCgmFrRcyH7d1zR9sIVQhFow",
+              "channel_url": "https://www.youtube.com/channel/UCgmFrRcyH7d1zR9sIVQhFow"
+            },
+            {
+              "name": "戌亥とこ",
+              "channel_id": "UCXRlIK3Cw_TJIQC5kSJJQMg",
+              "channel_url": "https://www.youtube.com/channel/UCXRlIK3Cw_TJIQC5kSJJQMg"
+            },
+            {
+              "name": "笹木咲",
+              "channel_id": "UCoztvTULBYd3WmStqYeoHcA",
+              "channel_url": "https://www.youtube.com/channel/UCoztvTULBYd3WmStqYeoHcA"
+            },
+            {
+              "name": "アンジュ・カトリーナ",
+              "channel_id": "UCHVXbQzkl3rDfsXWo8xi2qw",
+              "channel_url": "https://www.youtube.com/channel/UCHVXbQzkl3rDfsXWo8xi2qw"
+            },
+            {
+              "name": "加賀美ハヤト",
+              "channel_id": "UCmovZ2th3Sqpd00F5RdeigQ",
+              "channel_url": "https://www.youtube.com/channel/UCmovZ2th3Sqpd00F5RdeigQ"
+            },
+            {
+              "name": "社築",
+              "channel_id": "UCKMYISTJAQ8xTplUPHiABlA",
+              "channel_url": "https://www.youtube.com/channel/UCKMYISTJAQ8xTplUPHiABlA"
+            },
+            {
+              "name": "アルス・アルマル",
+              "channel_id": "UCdpUojq0KWZCN9bxXnZwz5w",
+              "channel_url": "https://www.youtube.com/channel/UCdpUojq0KWZCN9bxXnZwz5w"
+            },
+            {
+              "name": "椎名唯華",
+              "channel_id": "UC_4tXjqecqox5Uc05ncxpxg",
+              "channel_url": "https://www.youtube.com/channel/UC_4tXjqecqox5Uc05ncxpxg"
+            },
+            {
+              "name": "町田ちま",
+              "channel_id": "UCo7TRj3cS-f_1D9ZDmuTsjw",
+              "channel_url": "https://www.youtube.com/channel/UCo7TRj3cS-f_1D9ZDmuTsjw"
+            },
+            {
+              "name": "イブラヒム",
+              "channel_id": "UCmZ1Rbthn-6Jm_qOGjYsh5A",
+              "channel_url": "https://www.youtube.com/channel/UCmZ1Rbthn-6Jm_qOGjYsh5A"
+            },
+            {
+              "name": "ルンルン",
+              "channel_id": "UCzNXpqpdvlibmNc1JpM1o4g",
+              "channel_url": "https://www.youtube.com/@Lunlun_nijisanji"
+            },
+            {
+              "name": "フレン・E・ルスタリオ",
+              "channel_id": "UCuep1JCrMvSxOGgGhBfJuYw",
+              "channel_url": "https://www.youtube.com/channel/UCuep1JCrMvSxOGgGhBfJuYw"
+            },
+            {
+              "name": "緑仙",
+              "channel_id": "UCt5-0i4AVHXaWJrL8Wql3mw",
+              "channel_url": "https://www.youtube.com/channel/UCt5-0i4AVHXaWJrL8Wql3mw"
+            },
+            {
+              "name": "本間ひまわり",
+              "channel_id": "UC0g1AE0DOjBYnLhkgoRWN1w",
+              "channel_url": "https://www.youtube.com/channel/UC0g1AE0DOjBYnLhkgoRWN1w"
+            },
+            {
+              "name": "天宮こころ",
+              "channel_id": "UCkIimWZ9gBJRamKF0rmPU8w",
+              "channel_url": "https://www.youtube.com/channel/UCkIimWZ9gBJRamKF0rmPU8w"
+            },
+            {
+              "name": "三枝明那",
+              "channel_id": "UCNW1Ex0r6HsWRD4LCtPwvoQ",
+              "channel_url": "https://www.youtube.com/channel/UCNW1Ex0r6HsWRD4LCtPwvoQ"
+            },
+            {
+              "name": "鈴原るる",
+              "channel_id": "UC_a1ZYZ8ZTXpjg9xUY9sj8w",
+              "channel_url": "https://www.youtube.com/@LuluSuzuhara"
+            },
+            {
+              "name": "甲斐田晴",
+              "channel_id": "UCo2N7C-Z91waaR6lF3LL_jw",
+              "channel_url": "https://www.youtube.com/channel/UCo2N7C-Z91waaR6lF3LL_jw"
+            },
+            {
+              "name": "える",
+              "channel_id": "UCYKP16oMX9KKPbrNgo_Kgag",
+              "channel_url": "https://www.youtube.com/channel/UCYKP16oMX9KKPbrNgo_Kgag"
+            },
+            {
+              "name": "ニュイ・ソシエール",
+              "channel_id": "UCUc8GZfFxtmk7ZwSO7ccQ0g",
+              "channel_url": "https://www.youtube.com/channel/UCUc8GZfFxtmk7ZwSO7ccQ0g"
+            },
+            {
+              "name": "西園チグサ",
+              "channel_id": "UCkngxfPbmGyGl_RIq4FA3MQ",
+              "channel_url": "https://www.youtube.com/channel/UCkngxfPbmGyGl_RIq4FA3MQ"
+            },
+            {
+              "name": "周央サンゴ",
+              "channel_id": "UCL_O_HXgLJx3Auteer0n0pA",
+              "channel_url": "https://www.youtube.com/channel/UCL_O_HXgLJx3Auteer0n0pA"
+            },
+            {
+              "name": "でびでび・でびる",
+              "channel_id": "UCjlmCrq4TP1I4xguOtJ-31w",
+              "channel_url": "https://www.youtube.com/channel/UCjlmCrq4TP1I4xguOtJ-31w"
+            },
+            {
+              "name": "健屋花那",
+              "channel_id": "UC8C1LLhBhf_E2IBPLSDJXlQ",
+              "channel_url": "https://www.youtube.com/channel/UC8C1LLhBhf_E2IBPLSDJXlQ"
+            },
+            {
+              "name": "ラトナ・プティ",
+              "channel_id": "UCIG9rDtgR45VCZmYnd-4DUw",
+              "channel_url": "https://www.youtube.com/channel/UCIG9rDtgR45VCZmYnd-4DUw"
+            },
+            {
+              "name": "シスター・クレア",
+              "channel_id": "UC1zFJrfEKvCixhsjNSb1toQ",
+              "channel_url": "https://www.youtube.com/channel/UC1zFJrfEKvCixhsjNSb1toQ"
+            },
+            {
+              "name": "渡会雲雀",
+              "channel_id": "UC4l9gz3q65lTBFfFtW5LLeA",
+              "channel_url": "https://www.youtube.com/channel/UC4l9gz3q65lTBFfFtW5LLeA"
+            },
+            {
+              "name": "葉山舞鈴",
+              "channel_id": "UCfipDDn7wY-C-SoUChgxCQQ",
+              "channel_url": "https://www.youtube.com/channel/UCfipDDn7wY-C-SoUChgxCQQ"
+            },
+            {
+              "name": "ジョー・力一",
+              "channel_id": "UChUJbHiTVeGrSkTdBzVfNCQ",
+              "channel_url": "https://www.youtube.com/channel/UChUJbHiTVeGrSkTdBzVfNCQ"
+            },
+            {
+              "name": "竜胆尊",
+              "channel_id": "UCPvGypSgfDkVe7JG2KygK7A",
+              "channel_url": "https://www.youtube.com/channel/UCPvGypSgfDkVe7JG2KygK7A"
+            },
+            {
+              "name": "夜見れな",
+              "channel_id": "UCL34fAoFim9oHLbVzMKFavQ",
+              "channel_url": "https://www.youtube.com/channel/UCL34fAoFim9oHLbVzMKFavQ"
+            },
+            {
+              "name": "ましろ爻",
+              "channel_id": "UCS-XXTgVkotkbkDnGEprXpg",
+              "channel_url": "https://www.youtube.com/channel/UCS-XXTgVkotkbkDnGEprXpg"
+            },
+            {
+              "name": "魔界ノりりむ",
+              "channel_id": "UC9EjSJ8pvxtvPdxLOElv73w",
+              "channel_url": "https://www.youtube.com/channel/UC9EjSJ8pvxtvPdxLOElv73w"
+            },
+            {
+              "name": "花畑チャイカ",
+              "channel_id": "UCsFn_ueskBkMCEyzCEqAOvg",
+              "channel_url": "https://www.youtube.com/channel/UCsFn_ueskBkMCEyzCEqAOvg"
+            },
+            {
+              "name": "鷹宮リオン",
+              "channel_id": "UCV5ZZlLjk5MKGg3L0n0vbzw",
+              "channel_url": "https://www.youtube.com/channel/UCV5ZZlLjk5MKGg3L0n0vbzw"
+            },
+            {
+              "name": "エクス・アルビオ",
+              "channel_id": "UCIytNcoz4pWzXfLda0DoULQ",
+              "channel_url": "https://www.youtube.com/channel/UCIytNcoz4pWzXfLda0DoULQ"
+            },
+            {
+              "name": "長尾景",
+              "channel_id": "UCXW4MqCQn-jCaxlX-nn-BYg",
+              "channel_url": "https://www.youtube.com/channel/UCXW4MqCQn-jCaxlX-nn-BYg"
+            },
+            {
+              "name": "レオス・ヴィンセント",
+              "channel_id": "UC-6rZgmxZSIbq786j3RD5ow",
+              "channel_url": "https://www.youtube.com/channel/UC-6rZgmxZSIbq786j3RD5ow"
+            },
+            {
+              "name": "ベルモンド・バンデラス",
+              "channel_id": "UCbc8fwhdUNlqi-J99ISYu4A",
+              "channel_url": "https://www.youtube.com/channel/UCbc8fwhdUNlqi-J99ISYu4A"
+            },
+            {
+              "name": "葉加瀬冬雪",
+              "channel_id": "UCGYAYLDE7TZiiC8U6teciDQ",
+              "channel_url": "https://www.youtube.com/channel/UCGYAYLDE7TZiiC8U6teciDQ"
+            },
+            {
+              "name": "四季凪アキラ",
+              "channel_id": "UCcDDxnoQcezyTUzHg5uHaKg",
+              "channel_url": "https://www.youtube.com/channel/UCcDDxnoQcezyTUzHg5uHaKg"
+            },
+            {
+              "name": "舞元啓介",
+              "channel_id": "UCJubINhCcFXlsBwnHp0wl_g",
+              "channel_url": "https://www.youtube.com/channel/UCJubINhCcFXlsBwnHp0wl_g"
+            },
+            {
+              "name": "白雪巴",
+              "channel_id": "UCuvk5PilcvDECU7dDZhQiEw",
+              "channel_url": "https://www.youtube.com/channel/UCuvk5PilcvDECU7dDZhQiEw"
+            },
+            {
+              "name": "小柳ロウ",
+              "channel_id": "UC6WFKwYptsxVue56Lx218vg",
+              "channel_url": "https://www.youtube.com/@KoyanagiRou"
+            },
+            {
+              "name": "レイン・パターソン",
+              "channel_id": "UCRm6lqtdxs_Qo6HeL-SRQ-w",
+              "channel_url": "https://www.youtube.com/channel/UCRm6lqtdxs_Qo6HeL-SRQ-w"
+            },
+            {
+              "name": "文野環",
+              "channel_id": "UCBiqkFJljoxAj10SoP2w2Cg",
+              "channel_url": "https://www.youtube.com/channel/UCBiqkFJljoxAj10SoP2w2Cg"
+            },
+            {
+              "name": "卯月コウ",
+              "channel_id": "UC3lNFeJiTq6L3UWoz4g1e-A",
+              "channel_url": "https://www.youtube.com/channel/UC3lNFeJiTq6L3UWoz4g1e-A"
+            },
+            {
+              "name": "星導ショウ",
+              "channel_id": "UCgZ0pH7j6c9z-pkOG3PYw1Q",
+              "channel_url": "https://www.youtube.com/@HoshirubeSho"
+            },
+            {
+              "name": "栞葉るり",
+              "channel_id": "UC7_MFM9b8hp5kuTSpa8WyOQ",
+              "channel_url": "https://www.youtube.com/@ShiorihaRuri"
+            },
+            {
+              "name": "シェリン・バーガンディ",
+              "channel_id": "UCHBhnG2G-qN0JrrWmMO2FTA",
+              "channel_url": "https://www.youtube.com/channel/UCHBhnG2G-qN0JrrWmMO2FTA"
+            },
+            {
+              "name": "夕陽リリ",
+              "channel_id": "UC48jH1ul-6HOrcSSfoR02fQ",
+              "channel_url": "https://www.youtube.com/channel/UC48jH1ul-6HOrcSSfoR02fQ"
+            },
+            {
+              "name": "弦月藤士郎",
+              "channel_id": "UCGw7lrT-rVZCWHfdG9Frcgg",
+              "channel_url": "https://www.youtube.com/channel/UCGw7lrT-rVZCWHfdG9Frcgg"
+            },
+            {
+              "name": "静凛",
+              "channel_id": "UC6oDys1BGgBsIC3WhG1BovQ",
+              "channel_url": "https://www.youtube.com/channel/UC6oDys1BGgBsIC3WhG1BovQ"
+            },
+            {
+              "name": "ソフィア・ヴァレンタイン",
+              "channel_id": "UCivwPlOp0ojnMPZj5pNOPPA",
+              "channel_url": "https://www.youtube.com/channel/UCivwPlOp0ojnMPZj5pNOPPA"
+            },
+            {
+              "name": "セラフ・ダズルガーデン",
+              "channel_id": "UC5dJFf4m-mEcoyJRfhBljoA",
+              "channel_url": "https://www.youtube.com/channel/UC5dJFf4m-mEcoyJRfhBljoA"
+            },
+            {
+              "name": "緋八マナ",
+              "channel_id": "UCqXxS-9x9Ha_UiH6hG4kh5Q",
+              "channel_url": "https://www.youtube.com/@HibachiMana"
+            },
+            {
+              "name": "レヴィ・エリファ",
+              "channel_id": "UCtnO2N4kPTXmyvedjGWdx3Q",
+              "channel_url": "https://www.youtube.com/channel/UCtnO2N4kPTXmyvedjGWdx3Q"
+            },
+            {
+              "name": "夢追翔",
+              "channel_id": "UCTIE7LM5X15NVugV7Krp9Hw",
+              "channel_url": "https://www.youtube.com/channel/UCTIE7LM5X15NVugV7Krp9Hw"
+            },
+            {
+              "name": "風楽奏斗",
+              "channel_id": "UCC7rRD6P7RQcx0hKv9RQP4w",
+              "channel_url": "https://www.youtube.com/channel/UCC7rRD6P7RQcx0hKv9RQP4w"
+            },
+            {
+              "name": "石神のぞみ",
+              "channel_id": "UCtLfA_qUqCJtjXJM2ZR_keg",
+              "channel_url": "https://www.youtube.com/channel/UCtLfA_qUqCJtjXJM2ZR_keg"
+            },
+            {
+              "name": "佐伯イッテツ",
+              "channel_id": "UCy8P3o5XlMpJGQY4WugzdNA",
+              "channel_url": "https://www.youtube.com/@SaikiIttetsu"
+            },
+            {
+              "name": "伊波ライ",
+              "channel_id": "UCz89MGFBrAqwJ5xMr5weSuA",
+              "channel_url": "https://www.youtube.com/@InamiRai"
+            },
+            {
+              "name": "小清水透",
+              "channel_id": "UCUP8TmlO7NNra88AMqGU_vQ",
+              "channel_url": "https://www.youtube.com/channel/UCUP8TmlO7NNra88AMqGU_vQ"
+            },
+            {
+              "name": "ドーラ",
+              "channel_id": "UC53UDnhAAYwvNO7j_2Ju1cQ",
+              "channel_url": "https://www.youtube.com/channel/UC53UDnhAAYwvNO7j_2Ju1cQ"
+            },
+            {
+              "name": "伏見ガク",
+              "channel_id": "UCXU7YYxy_iQd3ulXyO-zC2w",
+              "channel_url": "https://www.youtube.com/channel/UCXU7YYxy_iQd3ulXyO-zC2w"
+            },
+            {
+              "name": "オリバー・エバンス",
+              "channel_id": "UCqjTqdVlvIipZXIKeCkHKUA",
+              "channel_url": "https://www.youtube.com/channel/UCqjTqdVlvIipZXIKeCkHKUA"
+            },
+            {
+              "name": "叢雲カゲツ",
+              "channel_id": "UChdY64fJb14Nfnbs8EGdQig",
+              "channel_url": "https://www.youtube.com/@MurakumoKagetsu"
+            },
+            {
+              "name": "夢月ロア",
+              "channel_id": "UCCVwhI5trmaSxfcze_Ovzfw",
+              "channel_url": "https://www.youtube.com/channel/UCCVwhI5trmaSxfcze_Ovzfw"
+            },
+            {
+              "name": "森中花咲",
+              "channel_id": "UCtpB6Bvhs1Um93ziEDACQ8g",
+              "channel_url": "https://www.youtube.com/channel/UCtpB6Bvhs1Um93ziEDACQ8g"
+            },
+            {
+              "name": "魁星",
+              "channel_id": "UC8SJPcLpIM3x8RdBJFfiluw",
+              "channel_url": "https://www.youtube.com/@Kaisei_nijisanji"
+            },
+            {
+              "name": "鈴木勝",
+              "channel_id": "UCryOPk2GZ1meIDt53tL30Tw",
+              "channel_url": "https://www.youtube.com/channel/UCryOPk2GZ1meIDt53tL30Tw"
+            },
+            {
+              "name": "ヤン ナリ",
+              "channel_id": "UCCHH0nWYXFZmtDS_4tvMxHQ",
+              "channel_url": "https://www.youtube.com/channel/UCCHH0nWYXFZmtDS_4tvMxHQ"
+            },
+            {
+              "name": "獅子堂あかり",
+              "channel_id": "UCWRPqA0ehhWV4Hnp27PJCkQ",
+              "channel_url": "https://www.youtube.com/channel/UCWRPqA0ehhWV4Hnp27PJCkQ"
+            },
+            {
+              "name": "北小路ヒスイ",
+              "channel_id": "UCRqBKoKuX30ruKAq05pCeRQ",
+              "channel_url": "https://www.youtube.com/channel/UCRqBKoKuX30ruKAq05pCeRQ"
+            },
+            {
+              "name": "宇佐美リト",
+              "channel_id": "UCambvP8yxNDot4FzQc9cgiw",
+              "channel_url": "https://www.youtube.com/@UsamiRito"
+            },
+            {
+              "name": "魔使マオ",
+              "channel_id": "UCerkculBD7YLc_vOGrF7tKg",
+              "channel_url": "https://www.youtube.com/channel/UCerkculBD7YLc_vOGrF7tKg"
+            },
+            {
+              "name": "五十嵐梨花",
+              "channel_id": "UCu-rV2gPtJ-CsGxe71z_BrQ",
+              "channel_url": "https://www.youtube.com/channel/UCu-rV2gPtJ-CsGxe71z_BrQ"
+            },
+            {
+              "name": "榊ネス",
+              "channel_id": "UCyXBNgCulibV9pRm3ZKpmoQ",
+              "channel_url": "https://www.youtube.com/@SakakiNess"
+            },
+            {
+              "name": "先斗寧",
+              "channel_id": "UCe22Bcwd_GCpTjLxn83zl7A",
+              "channel_url": "https://www.youtube.com/channel/UCe22Bcwd_GCpTjLxn83zl7A"
+            },
+            {
+              "name": "赤城ウェン",
+              "channel_id": "UC1vawzfbCnRpHT9SJ5pHlHw",
+              "channel_url": "https://www.youtube.com/@AkagiWen"
+            },
+            {
+              "name": "黒井しば",
+              "channel_id": "UCmeyo5pRj_6PXG-CsGUuWWg",
+              "channel_url": "https://www.youtube.com/channel/UCmeyo5pRj_6PXG-CsGUuWWg"
+            },
+            {
+              "name": "早瀬走",
+              "channel_id": "UC2OacIzd2UxGHRGhdHl1Rhw",
+              "channel_url": "https://www.youtube.com/channel/UC2OacIzd2UxGHRGhdHl1Rhw"
+            },
+            {
+              "name": "ハナ マキア",
+              "channel_id": "UCpJtk0myFr5WnyfsmnInP-w",
+              "channel_url": "https://www.youtube.com/channel/UCpJtk0myFr5WnyfsmnInP-w"
+            },
+            {
+              "name": "桜凛月",
+              "channel_id": "UCfQVs_KuXeNAlGa3fb8rlnQ",
+              "channel_url": "https://www.youtube.com/channel/UCfQVs_KuXeNAlGa3fb8rlnQ"
+            },
+            {
+              "name": "山神カルタ",
+              "channel_id": "UCllKI7VjyANuS1RXatizfLQ",
+              "channel_url": "https://www.youtube.com/channel/UCllKI7VjyANuS1RXatizfLQ"
+            },
+            {
+              "name": "珠乃井ナナ",
+              "channel_id": "UCkhViRjLUKgIcVpar9JiNrw",
+              "channel_url": "https://www.youtube.com/@TamanoiNana"
+            },
+            {
+              "name": "フミ",
+              "channel_id": "UCwrjITPwG4q71HzihV2C7Nw",
+              "channel_url": "https://www.youtube.com/channel/UCwrjITPwG4q71HzihV2C7Nw"
+            },
+            {
+              "name": "神田笑一",
+              "channel_id": "UCWz0CSYCxf4MhRKPDm220AQ",
+              "channel_url": "https://www.youtube.com/channel/UCWz0CSYCxf4MhRKPDm220AQ"
+            },
+            {
+              "name": "家長むぎ",
+              "channel_id": "UC_GCs6GARLxEHxy1w40d6VQ",
+              "channel_url": "https://www.youtube.com/channel/UC_GCs6GARLxEHxy1w40d6VQ"
+            },
+            {
+              "name": "物述有栖",
+              "channel_id": "UCt0clH12Xk1-Ej5PXKGfdPA",
+              "channel_url": "https://www.youtube.com/channel/UCt0clH12Xk1-Ej5PXKGfdPA"
+            },
+            {
+              "name": "海妹四葉",
+              "channel_id": "UCtHY-tP0dyykhTRMmnfPs_g",
+              "channel_url": "https://www.youtube.com/channel/UCtHY-tP0dyykhTRMmnfPs_g"
+            },
+            {
+              "name": "来栖夏芽",
+              "channel_id": "UCRcLAVTbmx2-iNcXSsupdNA",
+              "channel_url": "https://www.youtube.com/channel/UCRcLAVTbmx2-iNcXSsupdNA"
+            },
+            {
+              "name": "倉持めると",
+              "channel_id": "UCiA-trSZfB0i92V_-dyDqBw",
+              "channel_url": "https://www.youtube.com/channel/UCiA-trSZfB0i92V_-dyDqBw"
+            },
+            {
+              "name": "ルイス・キャミー",
+              "channel_id": "UCb6ObE-XGCctO3WrjRZC-cw",
+              "channel_url": "https://www.youtube.com/channel/UCb6ObE-XGCctO3WrjRZC-cw"
+            },
+            {
+              "name": "北見遊征",
+              "channel_id": "UCcx3crxPFi006DUhb_YU-tw",
+              "channel_url": "https://www.youtube.com/@KitamiYusei"
+            },
+            {
+              "name": "ミラン・ケストレル",
+              "channel_id": "UCFtyinR2ZdvKK_Xgy07qXUg",
+              "channel_url": "https://www.youtube.com/@MilanKestrel"
+            },
+            {
+              "name": "エリー・コニファー",
+              "channel_id": "UCpNH2Zk2gw3JBjWAKSyZcQQ",
+              "channel_url": "https://www.youtube.com/channel/UCpNH2Zk2gw3JBjWAKSyZcQQ"
+            },
+            {
+              "name": "七瀬すず菜",
+              "channel_id": "UCtC3B1n4XMiJmrDtu1Ni5qw",
+              "channel_url": "https://www.youtube.com/@NanaseSuzuna"
+            },
+            {
+              "name": "鏑木ろこ",
+              "channel_id": "UClrQ7xhRBxS_v_-WuudGKmA",
+              "channel_url": "https://www.youtube.com/channel/UClrQ7xhRBxS_v_-WuudGKmA"
+            },
+            {
+              "name": "小野町春香",
+              "channel_id": "UCg63a3lk6PNeWhVvMRM_mrQ",
+              "channel_url": "https://www.youtube.com/channel/UCg63a3lk6PNeWhVvMRM_mrQ"
+            },
+            {
+              "name": "セフィナ",
+              "channel_id": "UCeGendL8CO5RkffB6IFwHow",
+              "channel_url": "https://www.youtube.com/channel/UCeGendL8CO5RkffB6IFwHow"
+            },
+            {
+              "name": "えま★おうがすと",
+              "channel_id": "UCl1oLKcAq93p-pwKfDGhiYQ",
+              "channel_url": "https://www.youtube.com/channel/UCl1oLKcAq93p-pwKfDGhiYQ"
+            },
+            {
+              "name": "渚トラウト",
+              "channel_id": "UCpjypWF_wNRs9_TrjjWngpQ",
+              "channel_url": "https://www.youtube.com/@NagisaTrout"
+            },
+            {
+              "name": "早乙女ベリー",
+              "channel_id": "UC0xry7czPasj1wPxR8L0MZg",
+              "channel_url": "https://www.youtube.com/@Saotomeberry"
+            },
+            {
+              "name": "雨森小夜",
+              "channel_id": "UCRWOdwLRsenx2jLaiCAIU4A",
+              "channel_url": "https://www.youtube.com/channel/UCRWOdwLRsenx2jLaiCAIU4A"
+            },
+            {
+              "name": "雪城眞尋",
+              "channel_id": "UCHX7YpFG8rVwhsHCx34xt7w",
+              "channel_url": "https://www.youtube.com/channel/UCHX7YpFG8rVwhsHCx34xt7w"
+            },
+            {
+              "name": "赤羽葉子",
+              "channel_id": "UCBi8YaVyZpiKWN3_Z0dCTfQ",
+              "channel_url": "https://www.youtube.com/channel/UCBi8YaVyZpiKWN3_Z0dCTfQ"
+            },
+            {
+              "name": "空星きらめ",
+              "channel_id": "UC_82HBGtvwN1hcGeOGHzUBQ",
+              "channel_url": "https://www.youtube.com/channel/UC_82HBGtvwN1hcGeOGHzUBQ"
+            },
+            {
+              "name": "ギルザレンⅢ世",
+              "channel_id": "UCUzJ90o1EjqUbk2pBAy0_aw",
+              "channel_url": "https://www.youtube.com/channel/UCUzJ90o1EjqUbk2pBAy0_aw"
+            },
+            {
+              "name": "司賀りこ",
+              "channel_id": "UCzsCWYuvPUky3-DKzphYbEw",
+              "channel_url": "https://www.youtube.com/@ShigaRiko"
+            },
+            {
+              "name": "春崎エアル",
+              "channel_id": "UCtAvQ5U0aXyKwm2i4GqFgJg",
+              "channel_url": "https://www.youtube.com/channel/UCtAvQ5U0aXyKwm2i4GqFgJg"
+            },
+            {
+              "name": "酒寄颯馬",
+              "channel_id": "UCkQ8i_cz0prqdo9jj__L93Q",
+              "channel_url": "https://www.youtube.com/@SakayoriSoma"
+            },
+            {
+              "name": "宇志海いちご",
+              "channel_id": "UCmUjjW5zF1MMOhYUwwwQv9Q",
+              "channel_url": "https://www.youtube.com/channel/UCmUjjW5zF1MMOhYUwwwQv9Q"
+            },
+            {
+              "name": "東堂コハク",
+              "channel_id": "UCebT4Aq-3XWb5je1S1FvR_A",
+              "channel_url": "https://www.youtube.com/channel/UCebT4Aq-3XWb5je1S1FvR_A"
+            },
+            {
+              "name": "一橋綾人",
+              "channel_id": "UCcyiT8QT7fo7LrxXe1oxOoA",
+              "channel_url": "https://www.youtube.com/@HitotsubashiAyato"
+            },
+            {
+              "name": "愛園愛美",
+              "channel_id": "UC0WwEfE-jOM2rzjpdfhTzZA",
+              "channel_url": "https://www.youtube.com/channel/UC0WwEfE-jOM2rzjpdfhTzZA"
+            },
+            {
+              "name": "矢車りね",
+              "channel_id": "UCvzVB-EYuHFXHZrObB8a_Og",
+              "channel_url": "https://www.youtube.com/channel/UCvzVB-EYuHFXHZrObB8a_Og"
+            },
+            {
+              "name": "ミン スゥーハ",
+              "channel_id": "UCUtKkGKef8BYMs3h-3zQm9A",
+              "channel_url": "https://www.youtube.com/channel/UCUtKkGKef8BYMs3h-3zQm9A"
+            },
+            {
+              "name": "綺沙良",
+              "channel_id": "UCiJ_Um3KbfF19NzkDYLzZVQ",
+              "channel_url": "https://www.youtube.com/@Kisara_nijisanji"
+            },
+            {
+              "name": "渋谷ハジメ",
+              "channel_id": "UCeK9HFcRZoTrvqcUCtccMoQ",
+              "channel_url": "https://www.youtube.com/channel/UCeK9HFcRZoTrvqcUCtccMoQ"
+            },
+            {
+              "name": "立伝都々",
+              "channel_id": "UCnbJ8LTbHrsRgqkxwJXCU8w",
+              "channel_url": "https://www.youtube.com/@TachitsuteToto"
+            },
+            {
+              "name": "雲母たまこ",
+              "channel_id": "UCw-kTlPnZYSHhlGMFJ17Znw",
+              "channel_url": "https://www.youtube.com/@KiraraTamako"
+            },
+            {
+              "name": "モイラ",
+              "channel_id": "UCvmppcdYf4HOv-tFQhHHJMA",
+              "channel_url": "https://www.youtube.com/channel/UCvmppcdYf4HOv-tFQhHHJMA"
+            },
+            {
+              "name": "轟京子",
+              "channel_id": "UCRV9d6YCYIMUszK-83TwxVA",
+              "channel_url": "https://www.youtube.com/channel/UCRV9d6YCYIMUszK-83TwxVA"
+            },
+            {
+              "name": "五木左京",
+              "channel_id": "UCiBBDZ-ndtBgE4xKbswlgXQ",
+              "channel_url": "https://www.youtube.com/@ItsukiSakyo"
+            },
+            {
+              "name": "天ヶ瀬むゆ",
+              "channel_id": "UCAQDFeCTVdx90GtwohwjHzQ",
+              "channel_url": "https://www.youtube.com/channel/UCAQDFeCTVdx90GtwohwjHzQ"
+            },
+            {
+              "name": "ハ ユン",
+              "channel_id": "UCrhhJPNsOqzNIkUfTABoSpg",
+              "channel_url": "https://www.youtube.com/channel/UCrhhJPNsOqzNIkUfTABoSpg"
+            },
+            {
+              "name": "梢桃音",
+              "channel_id": "UCyJOgJhgfoVRpFjsBCUmuvg",
+              "channel_url": "https://www.youtube.com/@KozueMone"
+            },
+            {
+              "name": "語部紡",
+              "channel_id": "UCufQu4q65z63IgE4cfKs1BQ",
+              "channel_url": "https://www.youtube.com/channel/UCufQu4q65z63IgE4cfKs1BQ"
+            },
+            {
+              "name": "飛鳥ひな",
+              "channel_id": "UCiSRx1a2k-0tOg-fs6gAolQ",
+              "channel_url": "https://www.youtube.com/channel/UCiSRx1a2k-0tOg-fs6gAolQ"
+            },
+            {
+              "name": "イ ロハ",
+              "channel_id": "UCClwIqTUn5LDpFucHyaAhHg",
+              "channel_url": "https://www.youtube.com/channel/UCClwIqTUn5LDpFucHyaAhHg"
+            },
+            {
+              "name": "ソ ナギ",
+              "channel_id": "UC5ek2GWKvUKFgnKSHuuCFrw",
+              "channel_url": "https://www.youtube.com/channel/UC5ek2GWKvUKFgnKSHuuCFrw"
+            },
+            {
+              "name": "猫屋敷美紅",
+              "channel_id": "UCaAu0DXNSPXCZPg6iHVwRVw",
+              "channel_url": "https://www.youtube.com/@NekoyashikiMiku"
+            },
+            {
+              "name": "城瀬いすみ",
+              "channel_id": "UCHVSA2OScyef9W7OwPGgJ9w",
+              "channel_url": "https://www.youtube.com/@ShiroseIsumi"
+            },
+            {
+              "name": "ライラ アルストロエメリア",
+              "channel_id": "UCyRkQSuhJILuGOuXk10voPg",
+              "channel_url": "https://www.youtube.com/channel/UCyRkQSuhJILuGOuXk10voPg"
+            },
+            {
+              "name": "蝸堂みかる",
+              "channel_id": "UCIq2HwA2iBOso7ar4VuU-TA",
+              "channel_url": "https://www.youtube.com/@KadouMikaru"
+            },
+            {
+              "name": "十河ののは",
+              "channel_id": "UCrRdBPzK4sj-MMvYOhHRvHg",
+              "channel_url": "https://www.youtube.com/@TogawaNonoha"
+            },
+            {
+              "name": "花籠つばさ",
+              "channel_id": "UCcswLVd6KGBf5mIdzeO83bA",
+              "channel_url": "https://www.youtube.com/@HanakagoTsubasa"
+            },
+            {
+              "name": "皇れお",
+              "channel_id": "UCcYrL_GQe8X8K2ARhw_Syww",
+              "channel_url": "https://www.youtube.com/@SumeragiReo"
+            },
+            {
+              "name": "篠宮ゆの",
+              "channel_id": "UCo96eJdTpPOrxHFztYajbtg",
+              "channel_url": "https://www.youtube.com/@ShinomiyaYuno"
+            },
+            {
+              "name": "ナ セラ",
+              "channel_id": "UCX88Pe54pxbJDSGIyGrzNdg",
+              "channel_url": "https://www.youtube.com/channel/UCX88Pe54pxbJDSGIyGrzNdg"
+            },
+            {
+              "name": "エトナ クリムソン",
+              "channel_id": "UCjFu-9GHnabzSFRAYm1B9Dw",
+              "channel_url": "https://www.youtube.com/channel/UCjFu-9GHnabzSFRAYm1B9Dw"
+            },
+            {
+              "name": "オ ジユ",
+              "channel_id": "UCnzZmBOSrQf2wDBbnsDajVw",
+              "channel_url": "https://www.youtube.com/channel/UCnzZmBOSrQf2wDBbnsDajVw"
+            },
+            {
+              "name": "夜牛詩乃",
+              "channel_id": "UCBjcx01rZwPDuUPzWLTsZVA",
+              "channel_url": "https://www.youtube.com/@YagyuShino"
+            },
+            {
+              "name": "明楽レイ",
+              "channel_id": "UC7hffDQLKIEG-_zoAQkMIvg",
+              "channel_url": "https://www.youtube.com/channel/UC7hffDQLKIEG-_zoAQkMIvg"
+            },
+            {
+              "name": "ライ ガリレイ",
+              "channel_id": "UC8Snw5i4eOJXEQqURAK17hQ",
+              "channel_url": "https://www.youtube.com/channel/UC8Snw5i4eOJXEQqURAK17hQ"
+            },
+            {
+              "name": "ガオン",
+              "channel_id": "UCpRXCTyNNa-MnjhK6gisnRw",
+              "channel_url": "https://www.youtube.com/channel/UCpRXCTyNNa-MnjhK6gisnRw"
+            },
+            {
+              "name": "デレム カド",
+              "channel_id": "UCMzVa7B8UEdrvUGsPmSgyjA",
+              "channel_url": "https://www.youtube.com/channel/UCMzVa7B8UEdrvUGsPmSgyjA"
+            },
+            {
+              "name": "リュ ハリ",
+              "channel_id": "UClS6k3w1sPwlVFqK3-yID5A",
+              "channel_url": "https://www.youtube.com/channel/UClS6k3w1sPwlVFqK3-yID5A"
+            },
+            {
+              "name": "ナギサ アルシニア",
+              "channel_id": "UCijNnZ-6m8g85UGaRAWuw7g",
+              "channel_url": "https://www.youtube.com/channel/UCijNnZ-6m8g85UGaRAWuw7g"
+            }
+          ]
+        },
+        {
+          "name": "にじさんじEN",
+          "name_en": "nijisanji-en",
+          "channels": [
+            {
+              "name": "ヴォックス・アクマ",
+              "channel_id": "UCckdfYDGrjojJM28n5SHYrA",
+              "channel_url": "https://www.youtube.com/channel/UCckdfYDGrjojJM28n5SHYrA"
+            },
+            {
+              "name": "ルカ・カネシロ",
+              "channel_id": "UC7Gb7Uawe20QyFibhLl1lzA",
+              "channel_url": "https://www.youtube.com/channel/UC7Gb7Uawe20QyFibhLl1lzA"
+            },
+            {
+              "name": "闇ノシュウ",
+              "channel_id": "UCG0rzBZV_QMP4MtWg6IjhEA",
+              "channel_url": "https://www.youtube.com/channel/UCG0rzBZV_QMP4MtWg6IjhEA"
+            },
+            {
+              "name": "アルバーン・ノックス",
+              "channel_id": "UCQ1zGxHrfEmmW4CPpBx9-qw",
+              "channel_url": "https://www.youtube.com/channel/UCQ1zGxHrfEmmW4CPpBx9-qw"
+            },
+            {
+              "name": "浮奇・ヴィオレタ",
+              "channel_id": "UChJ5FTsHOu72_5OVx0rvsvQ",
+              "channel_url": "https://www.youtube.com/channel/UChJ5FTsHOu72_5OVx0rvsvQ"
+            },
+            {
+              "name": "エナー・アールウェット",
+              "channel_id": "UCR6qhsLpn62WVxCBK1dkLow",
+              "channel_url": "https://www.youtube.com/channel/UCR6qhsLpn62WVxCBK1dkLow"
+            },
+            {
+              "name": "狂蘭 メロコ",
+              "channel_id": "UChKXd7oqD18qiIYBoRIHTlw",
+              "channel_url": "https://www.youtube.com/@MelocoKyoran"
+            },
+            {
+              "name": "サニー・ブリスコー",
+              "channel_id": "UCuuAb_72QzK0M1USPMEl1yw",
+              "channel_url": "https://www.youtube.com/channel/UCuuAb_72QzK0M1USPMEl1yw"
+            },
+            {
+              "name": "レン ゾット",
+              "channel_id": "UCKu59gTZ_rdEmerdx5rV4Yg",
+              "channel_url": "https://www.youtube.com/channel/UCKu59gTZ_rdEmerdx5rV4Yg"
+            },
+            {
+              "name": "エリーラ ペンドラ",
+              "channel_id": "UCIeSUTOTkF9Hs7q3SGcO-Ow",
+              "channel_url": "https://www.youtube.com/channel/UCIeSUTOTkF9Hs7q3SGcO-Ow"
+            },
+            {
+              "name": "ペトラ グリン",
+              "channel_id": "UCgA2jKRkqpY_8eysPUs8sjw",
+              "channel_url": "https://www.youtube.com/channel/UCgA2jKRkqpY_8eysPUs8sjw"
+            },
+            {
+              "name": "ミリー・パフェ",
+              "channel_id": "UC47rNmkDcNgbOcM-2BwzJTQ",
+              "channel_url": "https://www.youtube.com/channel/UC47rNmkDcNgbOcM-2BwzJTQ"
+            },
+            {
+              "name": "フィナーナ 竜宮",
+              "channel_id": "UCu-J8uIXuLZh16gG-cT1naw",
+              "channel_url": "https://www.youtube.com/channel/UCu-J8uIXuLZh16gG-cT1naw"
+            },
+            {
+              "name": "マリア マリオネット",
+              "channel_id": "UCwaS8_S7kMiKA3izlTWHbQg",
+              "channel_url": "https://www.youtube.com/channel/UCwaS8_S7kMiKA3izlTWHbQg"
+            },
+            {
+              "name": "スカーレ ヨナグニ",
+              "channel_id": "UCFgXWZOUZA2oYHNr6qDmsTQ",
+              "channel_url": "https://www.youtube.com/channel/UCFgXWZOUZA2oYHNr6qDmsTQ"
+            },
+            {
+              "name": "ベンタクロウ ブリンガー",
+              "channel_id": "UCpYf6C9QsP_BRf97vLuXlIA",
+              "channel_url": "https://www.youtube.com/@VantacrowBringer"
+            },
+            {
+              "name": "アイア アマレ",
+              "channel_id": "UCN68LoM3khS4gdBMiWJO8WA",
+              "channel_url": "https://www.youtube.com/channel/UCN68LoM3khS4gdBMiWJO8WA"
+            },
+            {
+              "name": "ドッピオ ドロップサイト",
+              "channel_id": "UCy91xBlY_Brh3bnHxKtjrrg",
+              "channel_url": "https://www.youtube.com/@DoppioDropscythe"
+            },
+            {
+              "name": "ヴェール ヴァーミリオン",
+              "channel_id": "UCO8WcDsF5znr-qsXlzZNpqg",
+              "channel_url": "https://www.youtube.com/@VerVermillion"
+            },
+            {
+              "name": "ユウ Q ウィルソン",
+              "channel_id": "UCKpKC3M5fkcEvtOr06dmYlA",
+              "channel_url": "https://www.youtube.com/@YuQ.Wilson"
+            },
+            {
+              "name": "ヴェザリウス バンデージ",
+              "channel_id": "UCK9l6rTwU3hiSZijIMq51Gw",
+              "channel_url": "https://www.youtube.com/@VezaliusBandage"
+            },
+            {
+              "name": "ケイリクス・デボネア",
+              "channel_id": "UCEFOogmvTTcCaO8Qe0I8-tg",
+              "channel_url": "https://www.youtube.com/@KaelixDebonair"
+            },
+            {
+              "name": "フリオドール",
+              "channel_id": "UCr40BzcLiGruKe7M5gXR9zQ",
+              "channel_url": "https://www.youtube.com/@Freodore_nijisanji"
+            },
+            {
+              "name": "ジール・ギンジョウカ",
+              "channel_id": "UClMYGvekJOb51eBOCK-d4Dw",
+              "channel_url": "https://www.youtube.com/@ZealGinjoka"
+            },
+            {
+              "name": "セイブル",
+              "channel_id": "UCCugV2RWXqJMjVVQl_Yh4TQ",
+              "channel_url": "https://www.youtube.com/@Seible_nijisanji"
+            },
+            {
+              "name": "クロード クローマーク",
+              "channel_id": "UCdh-YF2gTzqDNu0VU9lwPPw",
+              "channel_url": "https://www.youtube.com/@ClaudeClawmark"
+            },
+            {
+              "name": "クララ チャームウッド",
+              "channel_id": "UCQYwIUCLqFoin7lHKmePjJw",
+              "channel_url": "https://www.youtube.com/@KlaraCharmwood"
+            },
+            {
+              "name": "凉舞 バレンウォート",
+              "channel_id": "UCIzZDiilcPv0wim_MbuizFA",
+              "channel_url": "https://www.youtube.com/@RyomaBarrenwort"
+            }
+          ]
+        },
+        {
+          "name": "にじさんじID",
+          "name_en": "nijisanji-id",
+          "channels": []
+        },
+        {
+          "name": "にじさんじKR",
+          "name_en": "nijisanji-kr",
+          "channels": []
+        },
+        {
+          "name": "VirtuaReal",
+          "name_en": "virtua-real",
+          "channels": [
+            {
+              "name": "尤格",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "暴食",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "希维",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "点酥",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "桃代",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "七海",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "艾因",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "吉吉",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "勾檀",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "入福步",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "弥月",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "雨纪",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "三理",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "晴一",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "蜜言",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "沐毛",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "妮慕",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "命依",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "雾深",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "瑞娅",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "桃星",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "帕可",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "米汀",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "雪烛",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "惑姫",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "光一",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "岁己",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "花礼",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "阿命",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "阿萨",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "八木迪之",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "哎小呜",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "未知夜",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "千春",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "悠亚",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "初濑",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "栞栞",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "千幽",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "勺",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "莱恩",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "江乱",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "鬼间",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "犬绒",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "能能",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "沙夜",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "度人",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "雪绘",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "离枝",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "漆羽",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "柚雨",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            },
+            {
+              "name": "泽音",
+              "channel_id": "dummy",
+              "channel_url": "https://www.youtube.com/channel/dummy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ぶいすぽっ!",
+      "name_en": "vspo",
+      "channels": [
+        {
+          "name": "Aizawa Ema",
+          "channel_id": "UC6YoF5-OmChAXHNff3ifR6Q",
+          "channel_url": "https://www.youtube.com/channel/UC6YoF5-OmChAXHNff3ifR6Q"
+        },
+        {
+          "name": "Amayui Moka",
+          "channel_id": "UCuI5XaO-6VkOEhHao6ij7JA",
+          "channel_url": "https://www.youtube.com/channel/UCuI5XaO-6VkOEhHao6ij7JA"
+        },
+        {
+          "name": "Arya Kuroha",
+          "channel_id": "UC7nyueGsb-5VDNPRh6pHtCA",
+          "channel_url": "https://www.youtube.com/channel/UC7nyueGsb-5VDNPRh6pHtCA"
+        },
+        {
+          "name": "Asumi Sena",
+          "channel_id": "UCF_U2GCKHvDz52jWdizppIA",
+          "channel_url": "https://www.youtube.com/channel/UCF_U2GCKHvDz52jWdizppIA"
+        },
+        {
+          "name": "Hanabusa Lisa",
+          "channel_id": "UC5LyYg6cCA4yHEYvtUsir3g",
+          "channel_url": "https://www.youtube.com/channel/UC5LyYg6cCA4yHEYvtUsir3g"
+        },
+        {
+          "name": "Kaga Nazuna",
+          "channel_id": "UCiMG6VdScBabPhJ1ZtaVmbw",
+          "channel_url": "https://www.youtube.com/channel/UCiMG6VdScBabPhJ1ZtaVmbw"
+        },
+        {
+          "name": "Kisaragi Ren",
+          "channel_id": "UCyLGcqYs7RsBb3L0SJfzGYA",
+          "channel_url": "https://www.youtube.com/channel/UCyLGcqYs7RsBb3L0SJfzGYA"
+        },
+        {
+          "name": "Kogara Toto",
+          "channel_id": "UCgTzsBI0DIRopMylJEDqnog",
+          "channel_url": "https://www.youtube.com/channel/UCgTzsBI0DIRopMylJEDqnog"
+        },
+        {
+          "name": "Komori Met",
+          "channel_id": "UCzUNASdzI4PV5SlqtYwAkKQ",
+          "channel_url": "https://www.youtube.com/channel/UCzUNASdzI4PV5SlqtYwAkKQ"
+        },
+        {
+          "name": "MUGEN LIVE",
+          "channel_id": "UCGH_ty6YBy2Q9KWtiRYm2IQ",
+          "channel_url": "https://www.youtube.com/channel/UCGH_ty6YBy2Q9KWtiRYm2IQ"
+        },
+        {
+          "name": "Remia Aotsuki",
+          "channel_id": "UCCra1t-eIlO3ULyXQQMD9Xw",
+          "channel_url": "https://www.youtube.com/channel/UCCra1t-eIlO3ULyXQQMD9Xw"
+        },
+        {
+          "name": "Shinomiya Runa",
+          "channel_id": "UCD5W21JqNMv_tV9nfjvF9sw",
+          "channel_url": "https://www.youtube.com/channel/UCD5W21JqNMv_tV9nfjvF9sw"
+        },
+        {
+          "name": "Shiranami Ramune",
+          "channel_id": "UC61OwuYOVuKkpKnid-43Twg",
+          "channel_url": "https://www.youtube.com/channel/UC61OwuYOVuKkpKnid-43Twg"
+        },
+        {
+          "name": "Shirasaki Tsuyuri",
+          "channel_id": "UCUceQpufooVwkqcKPjepFLw",
+          "channel_url": "https://www.youtube.com/channel/UCUceQpufooVwkqcKPjepFLw"
+        },
+        {
+          "name": "Tsumugi Kokage",
+          "channel_id": "UC-WX1CXssCtCtc2TNIRnJzg",
+          "channel_url": "https://www.youtube.com/channel/UC-WX1CXssCtCtc2TNIRnJzg"
+        },
+        {
+          "name": "Yakumo Beni",
+          "channel_id": "UCjXBuHmWkieBApgBhDuJMMQ",
+          "channel_url": "https://www.youtube.com/channel/UCjXBuHmWkieBApgBhDuJMMQ"
+        },
+        {
+          "name": "Yano Kuromu",
+          "channel_id": "UCX4WL24YEOUYd7qDsFSLDOw",
+          "channel_url": "https://www.youtube.com/channel/UCX4WL24YEOUYd7qDsFSLDOw"
+        },
+        {
+          "name": "Yumeno Akari",
+          "channel_id": "UCS5l_Y0oMVTjEos2LuyeSZQ",
+          "channel_url": "https://www.youtube.com/channel/UCS5l_Y0oMVTjEos2LuyeSZQ"
+        }
+      ]
+    },
+    {
+      "name": "Re:AcT",
+      "name_en": "react",
+      "channels": [
+        {
+          "name": "Amakawa Hano",
+          "channel_id": "UCxJ9SJLG7dA00M7VoEe4ltw",
+          "channel_url": "https://www.youtube.com/channel/UCxJ9SJLG7dA00M7VoEe4ltw"
+        },
+        {
+          "name": "Eleki Antares",
+          "channel_id": "UCKDHdDpoE9lurDuyAGAuNnw",
+          "channel_url": "https://www.youtube.com/channel/UCKDHdDpoE9lurDuyAGAuNnw"
+        },
+        {
+          "name": "Hanabasami Kyo",
+          "channel_id": "UC4OeUf_KfYRrwksschtRYow",
+          "channel_url": "https://www.youtube.com/channel/UC4OeUf_KfYRrwksschtRYow"
+        },
+        {
+          "name": "Himekuma Ribon",
+          "channel_id": "UC6HjtF2rHZO8gAsX5FXF-Kg",
+          "channel_url": "https://www.youtube.com/channel/UC6HjtF2rHZO8gAsX5FXF-Kg"
+        },
+        {
+          "name": "Kashiko Mari",
+          "channel_id": "UCfiK42sBHraMBK6eNWtsy7A",
+          "channel_url": "https://www.youtube.com/channel/UCfiK42sBHraMBK6eNWtsy7A"
+        },
+        {
+          "name": "Kazami Mikan",
+          "channel_id": "UCa5g-Q_NT2COXiSS55bwXVQ",
+          "channel_url": "https://www.youtube.com/channel/UCa5g-Q_NT2COXiSS55bwXVQ"
+        },
+        {
+          "name": "Koto Miyuri",
+          "channel_id": "UCBe_jjkUHhVNAj46bukAbJA",
+          "channel_url": "https://www.youtube.com/channel/UCBe_jjkUHhVNAj46bukAbJA"
+        },
+        {
+          "name": "Kulaku Lie",
+          "channel_id": "UCvwGSjWai2Xz_-HFUI5M5YA",
+          "channel_url": "https://www.youtube.com/channel/UCvwGSjWai2Xz_-HFUI5M5YA"
+        },
+        {
+          "name": "Kurama Tsumugi",
+          "channel_id": "UCX2Sm8SGWTUOyCizgrzadXA",
+          "channel_url": "https://www.youtube.com/channel/UCX2Sm8SGWTUOyCizgrzadXA"
+        },
+        {
+          "name": "Kurone Yomi",
+          "channel_id": "UCmssHxtaJAxIvje7LTHoKiw",
+          "channel_url": "https://www.youtube.com/channel/UCmssHxtaJAxIvje7LTHoKiw"
+        },
+        {
+          "name": "Makoh Lisa",
+          "channel_id": "UCDrG8pzkq_cCCLcN5wgrzNw",
+          "channel_url": "https://www.youtube.com/channel/UCDrG8pzkq_cCCLcN5wgrzNw"
+        },
+        {
+          "name": "Mikoshi Taran",
+          "channel_id": "UCShDuyxe-cDewxtcPbBmi_Q",
+          "channel_url": "https://www.youtube.com/channel/UCShDuyxe-cDewxtcPbBmi_Q"
+        },
+        {
+          "name": "Mizugame Mia",
+          "channel_id": "UCpPuEfqwYbpn7e2jWdQeWew",
+          "channel_url": "https://www.youtube.com/channel/UCpPuEfqwYbpn7e2jWdQeWew"
+        },
+        {
+          "name": "Nekono Yukino",
+          "channel_id": "UCoFEbNyIRUS26-hf2AucwFw",
+          "channel_url": "https://www.youtube.com/channel/UCoFEbNyIRUS26-hf2AucwFw"
+        },
+        {
+          "name": "Qualia Qu",
+          "channel_id": "UCXtQTtPJedfjqEPysorbsMg",
+          "channel_url": "https://www.youtube.com/channel/UCXtQTtPJedfjqEPysorbsMg"
+        },
+        {
+          "name": "Shishigami Leona",
+          "channel_id": "UCB1s_IdO-r0nUkY2mXeti-A",
+          "channel_url": "https://www.youtube.com/channel/UCB1s_IdO-r0nUkY2mXeti-A"
+        },
+        {
+          "name": "Sumeragi Rose",
+          "channel_id": "UCVbRXkQP-LumaBzfw-wsrrg",
+          "channel_url": "https://www.youtube.com/channel/UCVbRXkQP-LumaBzfw-wsrrg"
+        },
+        {
+          "name": "Ushio Tia",
+          "channel_id": "UCDPdK4ftX-GOWrWHtM4UMZw",
+          "channel_url": "https://www.youtube.com/channel/UCDPdK4ftX-GOWrWHtM4UMZw"
+        },
+        {
+          "name": "Usuwa Suu",
+          "channel_id": "UC90vyzmRgWCE17-uWNsKW2Q",
+          "channel_url": "https://www.youtube.com/channel/UC90vyzmRgWCE17-uWNsKW2Q"
+        },
+        {
+          "name": "Yuiga Kohaku",
+          "channel_id": "UCt0F29rrrkOU5Vu2gyYgrBA",
+          "channel_url": "https://www.youtube.com/channel/UCt0F29rrrkOU5Vu2gyYgrBA"
+        },
+        {
+          "name": "Yumekawa Kanau",
+          "channel_id": "UC8jskpQfW9fn2NLK3PdaGdg",
+          "channel_url": "https://www.youtube.com/channel/UC8jskpQfW9fn2NLK3PdaGdg"
+        }
+      ]
+    },
+    {
+      "name": "Neo-Porte",
+      "name_en": "neo-porte",
+      "channels": [
+        {
+          "name": "Amane Amu",
+          "channel_id": "UCm5rjZAFQuRrnDCkxnwvWkg",
+          "channel_url": "https://www.youtube.com/channel/UCm5rjZAFQuRrnDCkxnwvWkg"
+        },
+        {
+          "name": "Aogiri Eito",
+          "channel_id": "UCWnQDjlXTLDyYowc3LaHyJQ",
+          "channel_url": "https://www.youtube.com/channel/UCWnQDjlXTLDyYowc3LaHyJQ"
+        },
+        {
+          "name": "Aruse Inu",
+          "channel_id": "UChLfthKoUV502J7gU9STArg",
+          "channel_url": "https://www.youtube.com/channel/UChLfthKoUV502J7gU9STArg"
+        },
+        {
+          "name": "Ceo Kazari",
+          "channel_id": "UCo6mwsozDGMW0UNGowBJGhg",
+          "channel_url": "https://www.youtube.com/channel/UCo6mwsozDGMW0UNGowBJGhg"
+        },
+        {
+          "name": "Kuga Leo",
+          "channel_id": "UCEtUOMEAuAMz8dor89rt2RA",
+          "channel_url": "https://www.youtube.com/channel/UCEtUOMEAuAMz8dor89rt2RA"
+        },
+        {
+          "name": "NaYuta",
+          "channel_id": "UCVQROe7sDdROh4x0BpYHP1w",
+          "channel_url": "https://www.youtube.com/channel/UCVQROe7sDdROh4x0BpYHP1w"
+        },
+        {
+          "name": "Shirayuki Reid",
+          "channel_id": "UCIu-aUArYq_H84dBpCAokMA",
+          "channel_url": "https://www.youtube.com/channel/UCIu-aUArYq_H84dBpCAokMA"
+        },
+        {
+          "name": "Tentei Forte",
+          "channel_id": "UC8hwewh9svh92E1gXvgVazg",
+          "channel_url": "https://www.youtube.com/channel/UC8hwewh9svh92E1gXvgVazg"
+        }
+      ]
+    },
+    {
+      "name": ".LIVE",
+      "name_en": "dotlive",
+      "channels": [
+        {
+          "name": "Baacharu",
+          "channel_id": "UCLhUvJ_wO9hOvv_yYENu4fQ",
+          "channel_url": "https://www.youtube.com/channel/UCLhUvJ_wO9hOvv_yYENu4fQ"
+        },
+        {
+          "name": "Carro Pino",
+          "channel_id": "UCMzxQ58QL4NNbWghGymtHvw",
+          "channel_url": "https://www.youtube.com/channel/UCMzxQ58QL4NNbWghGymtHvw"
+        },
+        {
+          "name": "Dennou Shojo Siro",
+          "channel_id": "UC6TyfKcsrPwBsBnx2QobVLQ",
+          "channel_url": "https://www.youtube.com/channel/UC6TyfKcsrPwBsBnx2QobVLQ"
+        },
+        {
+          "name": "Kagura Suzu",
+          "channel_id": "UCUZ5AlC3rTlM-rA2cj5RP6w",
+          "channel_url": "https://www.youtube.com/channel/UCUZ5AlC3rTlM-rA2cj5RP6w"
+        },
+        {
+          "name": "Kakyoin Chieri",
+          "channel_id": "UCiGcHHHT3kBB1IGOrv7f3qQ",
+          "channel_url": "https://www.youtube.com/channel/UCiGcHHHT3kBB1IGOrv7f3qQ"
+        },
+        {
+          "name": "Kiso Azuki",
+          "channel_id": "UCmM5LprTu6-mSlIiRNkiXYg",
+          "channel_url": "https://www.youtube.com/channel/UCmM5LprTu6-mSlIiRNkiXYg"
+        },
+        {
+          "name": "Kitakami Futaba",
+          "channel_id": "UC5nfcGkOAm3JwfPvJvzplHg",
+          "channel_url": "https://www.youtube.com/channel/UC5nfcGkOAm3JwfPvJvzplHg"
+        },
+        {
+          "name": "Merry Milk",
+          "channel_id": "UCju7v8SkoWUQ5ITCQwmYpYg",
+          "channel_url": "https://www.youtube.com/channel/UCju7v8SkoWUQ5ITCQwmYpYg"
+        },
+        {
+          "name": "Mokota Mememe",
+          "channel_id": "UCz6Gi81kE6p5cdW1rT0ixqw",
+          "channel_url": "https://www.youtube.com/channel/UCz6Gi81kE6p5cdW1rT0ixqw"
+        },
+        {
+          "name": "Nanahoshi Milily",
+          "channel_id": "UCSlcMof1GIPvH6H_VcknCbQ",
+          "channel_url": "https://www.youtube.com/channel/UCSlcMof1GIPvH6H_VcknCbQ"
+        },
+        {
+          "name": "Nekonoki Mochi",
+          "channel_id": "UC02LBsjt_Ehe7k0CuiNC6RQ",
+          "channel_url": "https://www.youtube.com/channel/UC02LBsjt_Ehe7k0CuiNC6RQ"
+        },
+        {
+          "name": "Rikumu",
+          "channel_id": "UCtM5G3bS7zM8bv6p-OwoNTw",
+          "channel_url": "https://www.youtube.com/channel/UCtM5G3bS7zM8bv6p-OwoNTw"
+        },
+        {
+          "name": "Ushimaki Riko",
+          "channel_id": "UCKUcnaLsG2DeQqza8zRXHiA",
+          "channel_url": "https://www.youtube.com/channel/UCKUcnaLsG2DeQqza8zRXHiA"
+        },
+        {
+          "name": "Yaezawa Natori",
+          "channel_id": "UC1519-d1jzGiL1MPTxEdtSA",
+          "channel_url": "https://www.youtube.com/channel/UC1519-d1jzGiL1MPTxEdtSA"
+        },
+        {
+          "name": "Yamato Iori",
+          "channel_id": "UCyb-cllCkMREr9de-hoiDrg",
+          "channel_url": "https://www.youtube.com/channel/UCyb-cllCkMREr9de-hoiDrg"
+        },
+        {
+          "name": "Yozakura Tama",
+          "channel_id": "UCOefINa2_BmpuX4BbHjdk9A",
+          "channel_url": "https://www.youtube.com/channel/UCOefINa2_BmpuX4BbHjdk9A"
+        }
+      ]
+    },
+    {
+      "name": "PRISM Project",
+      "name_en": "prism-project",
+      "channels": [
+        {
+          "name": "Akane Jun",
+          "channel_id": "UCuTNHY_b7EvqhRO7COboxsQ",
+          "channel_url": "https://www.youtube.com/channel/UCuTNHY_b7EvqhRO7COboxsQ"
+        },
+        {
+          "name": "Amami Ami",
+          "channel_id": "UCC2VYZ_sgiCII711gd6gHnA",
+          "channel_url": "https://www.youtube.com/channel/UCC2VYZ_sgiCII711gd6gHnA"
+        },
+        {
+          "name": "Anon Non",
+          "channel_id": "UCI0C1VgM1T6qe9Hz-JEbuhA",
+          "channel_url": "https://www.youtube.com/channel/UCI0C1VgM1T6qe9Hz-JEbuhA"
+        },
+        {
+          "name": "Araka Luto",
+          "channel_id": "UCBJFsaCvgBa1a9BnEaxu97Q",
+          "channel_url": "https://www.youtube.com/channel/UCBJFsaCvgBa1a9BnEaxu97Q"
+        },
+        {
+          "name": "Hoshifuri Iku",
+          "channel_id": "UC2hWFlqMew61Jy6A8zu5HzQ",
+          "channel_url": "https://www.youtube.com/channel/UC2hWFlqMew61Jy6A8zu5HzQ"
+        },
+        {
+          "name": "Kamizuki Naki",
+          "channel_id": "UCx_A6fns9qKjybu-6k0ur1g",
+          "channel_url": "https://www.youtube.com/channel/UCx_A6fns9qKjybu-6k0ur1g"
+        },
+        {
+          "name": "Kitashiro Yuki",
+          "channel_id": "UCJ3XqKJ7TH68LbIe7jaHk3A",
+          "channel_url": "https://www.youtube.com/channel/UCJ3XqKJ7TH68LbIe7jaHk3A"
+        },
+        {
+          "name": "Mako Sameshima",
+          "channel_id": "UCqVwRGYcVavZ49rGmPB1DKA",
+          "channel_url": "https://www.youtube.com/channel/UCqVwRGYcVavZ49rGmPB1DKA"
+        },
+        {
+          "name": "Miyoshino Shiki",
+          "channel_id": "UCdruQW3mrywZVSR2B-BebSQ",
+          "channel_url": "https://www.youtube.com/channel/UCdruQW3mrywZVSR2B-BebSQ"
+        },
+        {
+          "name": "Nagare Sara",
+          "channel_id": "UCgM1sly6rnxqWe8GLbceEag",
+          "channel_url": "https://www.youtube.com/channel/UCgM1sly6rnxqWe8GLbceEag"
+        },
+        {
+          "name": "Nana Asteria",
+          "channel_id": "UCJwnGUjoniJA3It-P2snc-A",
+          "channel_url": "https://www.youtube.com/channel/UCJwnGUjoniJA3It-P2snc-A"
+        },
+        {
+          "name": "Oumiya Emma",
+          "channel_id": "UCKnts8S_hayjQIOXtQKCVIg",
+          "channel_url": "https://www.youtube.com/channel/UCKnts8S_hayjQIOXtQKCVIg"
+        },
+        {
+          "name": "Pengin Pina",
+          "channel_id": "UCpeRj9-GaLGNUoKdI5I7vZA",
+          "channel_url": "https://www.youtube.com/channel/UCpeRj9-GaLGNUoKdI5I7vZA"
+        },
+        {
+          "name": "Rikudou Yura",
+          "channel_id": "UCRBmx5uV_v9rb7ZKkVgg8Pg",
+          "channel_url": "https://www.youtube.com/channel/UCRBmx5uV_v9rb7ZKkVgg8Pg"
+        },
+        {
+          "name": "Shikami Lana",
+          "channel_id": "UCbwtBGLYpea4eIk-gocqJuw",
+          "channel_url": "https://www.youtube.com/channel/UCbwtBGLYpea4eIk-gocqJuw"
+        },
+        {
+          "name": "Suzune Nia",
+          "channel_id": "UCOWwsEaOpA6fycJlLkJ8ogQ",
+          "channel_url": "https://www.youtube.com/channel/UCOWwsEaOpA6fycJlLkJ8ogQ"
+        },
+        {
+          "name": "Ushio Sumi",
+          "channel_id": "UCKRGwowORbvAnoeZ-G06duQ",
+          "channel_url": "https://www.youtube.com/channel/UCKRGwowORbvAnoeZ-G06duQ"
+        }
+      ]
+    },
+    {
+      "name": "Phase-Connect",
+      "name_en": "phase-connect",
+      "channels": [
+        {
+          "name": "Amanogawa Shiina",
+          "channel_id": "UCHwDo5IRm54e-OboQg6mtCg",
+          "channel_url": "https://www.youtube.com/channel/UCHwDo5IRm54e-OboQg6mtCg"
+        },
+        {
+          "name": "Amaris Yuri",
+          "channel_id": "UCdqDlrY_4p3z_Ho4hS2-4Zw",
+          "channel_url": "https://www.youtube.com/channel/UCdqDlrY_4p3z_Ho4hS2-4Zw"
+        },
+        {
+          "name": "Anya Nyabyss",
+          "channel_id": "UCmbokzv5VTe9LeuzAFcDu9A",
+          "channel_url": "https://www.youtube.com/channel/UCmbokzv5VTe9LeuzAFcDu9A"
+        },
+        {
+          "name": "Ayase Yuu",
+          "channel_id": "UCRlZaszk84YXjRtdPCxqjvw",
+          "channel_url": "https://www.youtube.com/channel/UCRlZaszk84YXjRtdPCxqjvw"
+        },
+        {
+          "name": "Bibi Biscuit",
+          "channel_id": "UCzA7j_ixOvBz39saDYlbRiA",
+          "channel_url": "https://www.youtube.com/channel/UCzA7j_ixOvBz39saDYlbRiA"
+        },
+        {
+          "name": "Chisaka Airi",
+          "channel_id": "UCvvl-93S0KFGDEXDjYuUquw",
+          "channel_url": "https://www.youtube.com/channel/UCvvl-93S0KFGDEXDjYuUquw"
+        },
+        {
+          "name": "Clio Aite",
+          "channel_id": "UClpOEZoIYhxIY6n5NNGaPbA",
+          "channel_url": "https://www.youtube.com/channel/UClpOEZoIYhxIY6n5NNGaPbA"
+        },
+        {
+          "name": "Dizzy Dokuro",
+          "channel_id": "UCx_zwZuGIS4jxO07kFk8G6Q",
+          "channel_url": "https://www.youtube.com/channel/UCx_zwZuGIS4jxO07kFk8G6Q"
+        },
+        {
+          "name": "Eepy Sleepy",
+          "channel_id": "UCAvfDDeS06FHImgfMKpw_7Q",
+          "channel_url": "https://www.youtube.com/channel/UCAvfDDeS06FHImgfMKpw_7Q"
+        },
+        {
+          "name": "Eimi Isami",
+          "channel_id": "UCoAQsc-DQ0MjfTp059otQAw",
+          "channel_url": "https://www.youtube.com/channel/UCoAQsc-DQ0MjfTp059otQAw"
+        },
+        {
+          "name": "Fujikura Uruka",
+          "channel_id": "UCg7sW-h1PUowdiR5K4HlBew",
+          "channel_url": "https://www.youtube.com/channel/UCg7sW-h1PUowdiR5K4HlBew"
+        },
+        {
+          "name": "Himemiya Rie",
+          "channel_id": "UC3-Rfh_Ek-s6EUWS4fT5VPw",
+          "channel_url": "https://www.youtube.com/channel/UC3-Rfh_Ek-s6EUWS4fT5VPw"
+        },
+        {
+          "name": "Jelly Hoshiumi",
+          "channel_id": "UCpvudOny4HdRAkR0NAgCm_A",
+          "channel_url": "https://www.youtube.com/channel/UCpvudOny4HdRAkR0NAgCm_A"
+        },
+        {
+          "name": "Kaneko Lumi",
+          "channel_id": "UCL0_lYZwyhbcNX-feoyCcJw",
+          "channel_url": "https://www.youtube.com/channel/UCL0_lYZwyhbcNX-feoyCcJw"
+        },
+        {
+          "name": "Kannagi Loki",
+          "channel_id": "UCnNLZWjl4GvVF4s8zBT9_kA",
+          "channel_url": "https://www.youtube.com/channel/UCnNLZWjl4GvVF4s8zBT9_kA"
+        },
+        {
+          "name": "Komachi Panko",
+          "channel_id": "UCVo_KgPNsDKxHwzib7uarCw",
+          "channel_url": "https://www.youtube.com/channel/UCVo_KgPNsDKxHwzib7uarCw"
+        },
+        {
+          "name": "Makina Erina",
+          "channel_id": "UCnJNNk45O1QYS2oMRYFKSyw",
+          "channel_url": "https://www.youtube.com/channel/UCnJNNk45O1QYS2oMRYFKSyw"
+        },
+        {
+          "name": "Mari Mari",
+          "channel_id": "UCG5vZgELi3on_pksaLrIoxw",
+          "channel_url": "https://www.youtube.com/channel/UCG5vZgELi3on_pksaLrIoxw"
+        },
+        {
+          "name": "Muu Muyu",
+          "channel_id": "UCFzQd4pZ43ZNEdWBFe7QOKA",
+          "channel_url": "https://www.youtube.com/channel/UCFzQd4pZ43ZNEdWBFe7QOKA"
+        },
+        {
+          "name": "Pipkin Pippa",
+          "channel_id": "UC-okrbB2shgsauFNpqoB5rA",
+          "channel_url": "https://www.youtube.com/channel/UC-okrbB2shgsauFNpqoB5rA"
+        },
+        {
+          "name": "Remilia Nephys",
+          "channel_id": "UCCzroxjA6omt8DTDMZIcWAQ",
+          "channel_url": "https://www.youtube.com/channel/UCCzroxjA6omt8DTDMZIcWAQ"
+        },
+        {
+          "name": "Saya Sairroxs",
+          "channel_id": "UCejbicoRnQjCOdAPAv5JPwg",
+          "channel_url": "https://www.youtube.com/channel/UCejbicoRnQjCOdAPAv5JPwg"
+        },
+        {
+          "name": "Sinon Sinfonia",
+          "channel_id": "UCbk1_5NJV5jh3xrY4p5TBVw",
+          "channel_url": "https://www.youtube.com/channel/UCbk1_5NJV5jh3xrY4p5TBVw"
+        }
+      ]
+    },
+    {
+      "name": "ななしいんく",
+      "name_en": "nanashiinku",
+      "channels": [
+        {
+          "name": "Akane Canna",
+          "channel_id": "UCJEpkwwDiTKS5lxwFttEbIQ",
+          "channel_url": "https://www.youtube.com/channel/UCJEpkwwDiTKS5lxwFttEbIQ"
+        },
+        {
+          "name": "Camomi Camomi",
+          "channel_id": "UCL-2thbJ7grC9fmGF4OLuTg",
+          "channel_url": "https://www.youtube.com/channel/UCL-2thbJ7grC9fmGF4OLuTg"
+        },
+        {
+          "name": "Haibara Akane",
+          "channel_id": "UCOgONfZgrG2g0jntQKa6cDw",
+          "channel_url": "https://www.youtube.com/channel/UCOgONfZgrG2g0jntQKa6cDw"
+        },
+        {
+          "name": "Hashiba Natsumi",
+          "channel_id": "UC_BlXOQe5OcRC7o0GX8kp8A",
+          "channel_url": "https://www.youtube.com/channel/UC_BlXOQe5OcRC7o0GX8kp8A"
+        },
+        {
+          "name": "Hinokuma Ran",
+          "channel_id": "UCRvpMpzAXBRKJQuk-8-Sdvg",
+          "channel_url": "https://www.youtube.com/channel/UCRvpMpzAXBRKJQuk-8-Sdvg"
+        },
+        {
+          "name": "Huma Wat",
+          "channel_id": "UCV4EoK6BVNl7wxuxpUvvSWA",
+          "channel_url": "https://www.youtube.com/channel/UCV4EoK6BVNl7wxuxpUvvSWA"
+        },
+        {
+          "name": "Ina Uruu",
+          "channel_id": "UCxCdPRbi-s5J74A6KgkxnQg",
+          "channel_url": "https://www.youtube.com/channel/UCxCdPRbi-s5J74A6KgkxnQg"
+        },
+        {
+          "name": "Inaba Haneru",
+          "channel_id": "UC0Owc36U9lOyi9Gx9Ic-4qg",
+          "channel_url": "https://www.youtube.com/channel/UC0Owc36U9lOyi9Gx9Ic-4qg"
+        },
+        {
+          "name": "Inari Kuromu",
+          "channel_id": "UCGiFzwdasSAHILrx-DB1pVQ",
+          "channel_url": "https://www.youtube.com/channel/UCGiFzwdasSAHILrx-DB1pVQ"
+        },
+        {
+          "name": "Kojo Anna",
+          "channel_id": "UCvPPBoTOor5gm8zSlE2tg4w",
+          "channel_url": "https://www.youtube.com/channel/UCvPPBoTOor5gm8zSlE2tg4w"
+        },
+        {
+          "name": "Oura Rukako",
+          "channel_id": "UC3xG1XWzAKt5dxSxktJvtxg",
+          "channel_url": "https://www.youtube.com/channel/UC3xG1XWzAKt5dxSxktJvtxg"
+        },
+        {
+          "name": "Shimamura Charlotte",
+          "channel_id": "UCYTz3uIgwVY3ZU-IQJS8r3A",
+          "channel_url": "https://www.youtube.com/channel/UCYTz3uIgwVY3ZU-IQJS8r3A"
+        },
+        {
+          "name": "Shiromiya Mimi",
+          "channel_id": "UCtzCQnCT9E4o6U3mHHSHbQQ",
+          "channel_url": "https://www.youtube.com/channel/UCtzCQnCT9E4o6U3mHHSHbQQ"
+        },
+        {
+          "name": "Shishio Chris",
+          "channel_id": "UC--A2dwZW7-M2kID0N6_lfA",
+          "channel_url": "https://www.youtube.com/channel/UC--A2dwZW7-M2kID0N6_lfA"
+        },
+        {
+          "name": "Shisui Kiki",
+          "channel_id": "UC3MBUvkVTI9p-p0be7y7TQA",
+          "channel_url": "https://www.youtube.com/channel/UC3MBUvkVTI9p-p0be7y7TQA"
+        },
+        {
+          "name": "Sougetsu Eli",
+          "channel_id": "UC3UKMRQmBcjXWu66cvxcngA",
+          "channel_url": "https://www.youtube.com/channel/UC3UKMRQmBcjXWu66cvxcngA"
+        },
+        {
+          "name": "Suou Patra",
+          "channel_id": "UC1tBdWwNOsdMcO904N7eiWA",
+          "channel_url": "https://www.youtube.com/channel/UC1tBdWwNOsdMcO904N7eiWA"
+        },
+        {
+          "name": "Umori Hinako",
+          "channel_id": "UChqYnJlFxlBi6DfRz6jRenQ",
+          "channel_url": "https://www.youtube.com/channel/UChqYnJlFxlBi6DfRz6jRenQ"
+        }
+      ]
+    },
+    {
+      "name": "VShojo",
+      "name_en": "vshojo",
+      "channels": [
+        {
+          "name": "Akatsuki Hotaru",
+          "channel_id": "UCC3EJp_ygpQeGrn1HGXErlg",
+          "channel_url": "https://www.youtube.com/channel/UCC3EJp_ygpQeGrn1HGXErlg"
+        },
+        {
+          "name": "AmaLee",
+          "channel_id": "UCPnT8Fa3khqsILlxhxcCKHA",
+          "channel_url": "https://www.youtube.com/channel/UCPnT8Fa3khqsILlxhxcCKHA"
+        },
+        {
+          "name": "Amemiya Nazuna",
+          "channel_id": "UC5gs8EbpwbfQvrhizJx60TA",
+          "channel_url": "https://www.youtube.com/channel/UC5gs8EbpwbfQvrhizJx60TA"
+        },
+        {
+          "name": "Apricot",
+          "channel_id": "UC2jE-0qpoGOYaxow3mMXR2Q",
+          "channel_url": "https://www.youtube.com/channel/UC2jE-0qpoGOYaxow3mMXR2Q"
+        },
+        {
+          "name": "BEASTIEZ",
+          "channel_id": "UCRtugKQIPPfZmVZ6vLiOsdQ",
+          "channel_url": "https://www.youtube.com/channel/UCRtugKQIPPfZmVZ6vLiOsdQ"
+        },
+        {
+          "name": "Beribug",
+          "channel_id": "UCnz0wcNhch0nU1a6nnRLmNQ",
+          "channel_url": "https://www.youtube.com/channel/UCnz0wcNhch0nU1a6nnRLmNQ"
+        },
+        {
+          "name": "Densetsu.EXE",
+          "channel_id": "UCcHHkJ98eSfa5aj0mdTwwLQ",
+          "channel_url": "https://www.youtube.com/channel/UCcHHkJ98eSfa5aj0mdTwwLQ"
+        },
+        {
+          "name": "GEEGA",
+          "channel_id": "UCosR_fYnbN0iUJXelw8KJ8w",
+          "channel_url": "https://www.youtube.com/channel/UCosR_fYnbN0iUJXelw8KJ8w"
+        },
+        {
+          "name": "Haruka Karibu",
+          "channel_id": "UCsaupfMgx9m_kkzPgFCu8rw",
+          "channel_url": "https://www.youtube.com/channel/UCsaupfMgx9m_kkzPgFCu8rw"
+        },
+        {
+          "name": "Henya the Genius",
+          "channel_id": "UCVosJKRZJAWOX5xnlEjILOA",
+          "channel_url": "https://www.youtube.com/channel/UCVosJKRZJAWOX5xnlEjILOA"
+        },
+        {
+          "name": "Hestia Happiness",
+          "channel_id": "UC7Yyt1BWZh6yDW6uGrXOL_w",
+          "channel_url": "https://www.youtube.com/channel/UC7Yyt1BWZh6yDW6uGrXOL_w"
+        },
+        {
+          "name": "Hime Hajime",
+          "channel_id": "UCRfz2yOn8C7Jg5zq4Xi67-Q",
+          "channel_url": "https://www.youtube.com/channel/UCRfz2yOn8C7Jg5zq4Xi67-Q"
+        },
+        {
+          "name": "Kairyu Crocodile",
+          "channel_id": "UC8PMqEDpXcsooyDGiLvxs4w",
+          "channel_url": "https://www.youtube.com/channel/UC8PMqEDpXcsooyDGiLvxs4w"
+        },
+        {
+          "name": "Kson",
+          "channel_id": "UCOs5vQwMQBLUiYg5ENdrTSQ",
+          "channel_url": "https://www.youtube.com/channel/UCOs5vQwMQBLUiYg5ENdrTSQ"
+        },
+        {
+          "name": "Kuro Kurenai",
+          "channel_id": "UCp4kSYMiydVF06rGMDgdo4Q",
+          "channel_url": "https://www.youtube.com/channel/UCp4kSYMiydVF06rGMDgdo4Q"
+        },
+        {
+          "name": "Matara Kan",
+          "channel_id": "UCFa0HT2qPMbKhNb2aEhx0mQ",
+          "channel_url": "https://www.youtube.com/channel/UCFa0HT2qPMbKhNb2aEhx0mQ"
+        },
+        {
+          "name": "Michi Mochievee",
+          "channel_id": "UCfahhm2b2cDlOGNU6gCvyXg",
+          "channel_url": "https://www.youtube.com/channel/UCfahhm2b2cDlOGNU6gCvyXg"
+        },
+        {
+          "name": "Nyatasha Nyanners",
+          "channel_id": "UCRGEkGQVIwucHEsxGS0koyw",
+          "channel_url": "https://www.youtube.com/channel/UCRGEkGQVIwucHEsxGS0koyw"
+        },
+        {
+          "name": "Okamoto Nagi",
+          "channel_id": "UCIzgC9UfhG8eEbH7N5BBBWA",
+          "channel_url": "https://www.youtube.com/channel/UCIzgC9UfhG8eEbH7N5BBBWA"
+        },
+        {
+          "name": "Phoebe Chan",
+          "channel_id": "UCTOQQLzatFOM3R91G8ZIyxw",
+          "channel_url": "https://www.youtube.com/channel/UCTOQQLzatFOM3R91G8ZIyxw"
+        },
+        {
+          "name": "Projekt Melody",
+          "channel_id": "UC1yoRdFoFJaCY-AGfD9W0wQ",
+          "channel_url": "https://www.youtube.com/channel/UC1yoRdFoFJaCY-AGfD9W0wQ"
+        },
+        {
+          "name": "Silvervale",
+          "channel_id": "UCGA219i22b3oHcKrZxVoFNA",
+          "channel_url": "https://www.youtube.com/channel/UCGA219i22b3oHcKrZxVoFNA"
+        },
+        {
+          "name": "Tori Oriane",
+          "channel_id": "UClQuqgfslfwZ3-SPPDzb_QA",
+          "channel_url": "https://www.youtube.com/channel/UClQuqgfslfwZ3-SPPDzb_QA"
+        },
+        {
+          "name": "Veibae",
+          "channel_id": "UCsBFeCb82qOXyUP19nmD9xw",
+          "channel_url": "https://www.youtube.com/channel/UCsBFeCb82qOXyUP19nmD9xw"
+        },
+        {
+          "name": "Yutori Peke",
+          "channel_id": "UCYeGffYqdPkSxWBeEoZqOEQ",
+          "channel_url": "https://www.youtube.com/channel/UCYeGffYqdPkSxWBeEoZqOEQ"
+        },
+        {
+          "name": "Zentreya",
+          "channel_id": "UCCflYIADa95LF5OKchJPB0w",
+          "channel_url": "https://www.youtube.com/channel/UCCflYIADa95LF5OKchJPB0w"
+        }
+      ]
+    }
+  ]
+}
