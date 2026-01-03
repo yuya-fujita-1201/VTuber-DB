@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import TagRelations from '../components/TagRelations';
 
 function TagDetail() {
   const { id } = useParams();
@@ -69,6 +70,16 @@ function TagDetail() {
           </div>
         </div>
       </div>
+
+      {/* Related Tags */}
+      {tagData.tag.related_tags && tagData.tag.related_tags.length > 0 && (
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            関連タグ
+          </h2>
+          <TagRelations relations={tagData.tag.related_tags} />
+        </div>
+      )}
 
       {/* VTubers with this tag */}
       <div>

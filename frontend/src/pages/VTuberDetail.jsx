@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import SimilarVTubers from '../components/SimilarVTubers';
 
 function VTuberDetail() {
   const { id } = useParams();
@@ -199,37 +200,7 @@ function VTuberDetail() {
 
           {/* Similar VTubers */}
           {vtuber.similar_vtubers && vtuber.similar_vtubers.length > 0 && (
-            <div className="card mt-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                似ているVTuber
-              </h2>
-              <div className="space-y-3">
-                {vtuber.similar_vtubers.slice(0, 5).map((similar) => (
-                  <Link
-                    key={similar.id}
-                    to={`/vtubers/${similar.id}`}
-                    className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition"
-                  >
-                    {similar.avatar_url && (
-                      <img
-                        src={similar.avatar_url}
-                        alt={similar.name}
-                        className="w-12 h-12 rounded-full object-cover"
-                      />
-                    )}
-                    <div className="flex-1">
-                      <div className="font-semibold text-gray-900">{similar.name}</div>
-                      <div className="text-sm text-gray-600">
-                        {similar.subscriber_count?.toLocaleString() || 0} 登録者
-                      </div>
-                    </div>
-                    <div className="text-xs bg-primary-100 text-primary-800 px-2 py-1 rounded">
-                      {similar.common_tags} 共通タグ
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <SimilarVTubers vtubers={vtuber.similar_vtubers} className="mt-6" />
           )}
         </div>
       </div>
