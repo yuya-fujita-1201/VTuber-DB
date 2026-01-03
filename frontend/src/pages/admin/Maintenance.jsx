@@ -11,10 +11,16 @@ function Maintenance() {
   const [calculatingRelations, setCalculatingRelations] = useState(false);
   const [generatingEvidence, setGeneratingEvidence] = useState(false);
   const [runningAll, setRunningAll] = useState(false);
+  const [updatingStale, setUpdatingStale] = useState(false);
+  const [recalculatingStale, setRecalculatingStale] = useState(false);
+  
+  const [staleLimit, setStaleLimit] = useState(50);
+  const [minStaleLevel, setMinStaleLevel] = useState(1);
   
   const [contentLimit, setContentLimit] = useState(10);
   const [evidenceLimit, setEvidenceLimit] = useState(50);
   const [minCooccurrence, setMinCooccurrence] = useState(3);
+  const [selectedTier, setSelectedTier] = useState('S');
   
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
@@ -215,6 +221,78 @@ function Maintenance() {
     }
   };
 
+  const handleUpdateStale = async () => {
+    setUpdatingStale(true);
+    setMessage('');
+    setError('');
+
+    try {
+      const res = await fetch('/api/admin/update-stale', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          limit: staleLimit,
+          minStaleLevel,
+        }),
+      });
+
+      if (res.status === 401) {
+        handleUnauthorized();
+        return;
+      }
+
+      if (!res.ok) {
+        throw new Error('データ更新に失敗しました');
+      }
+
+      const data = await res.json();
+      setMessage(data.message || `${data.updated}人のVTuberデータを更新しました`);
+      fetchStats();
+    } catch (err) {
+      console.error('Error in update stale:', err);
+      setError('データ更新に失敗しました: ' + err.message);
+    } finally {
+      setUpdatingStale(false);
+    }
+  };
+
+  const handleRecalculateStale = async () => {
+    setRecalculatingStale(true);
+    setMessage('');
+    setError('');
+
+    try {
+      const res = await fetch('/api/admin/recalculate-stale', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+      });
+
+      if (res.status === 401) {
+        handleUnauthorized();
+        return;
+      }
+
+      if (!res.ok) {
+        throw new Error('stale_levelの再計算に失敗しました');
+      }
+
+      const data = await res.json();
+      setMessage(data.message || `${data.updated}人のstale_levelを再計算しました`);
+      fetchStats();
+    } catch (err) {
+      console.error('Error in recalculate stale:', err);
+      setError('stale_levelの再計算に失敗しました: ' + err.message);
+    } finally {
+      setRecalculatingStale(false);
+    }
+  };
+
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
@@ -398,6 +476,97 @@ function Maintenance() {
           >
             {generatingEvidence ? '生成中...' : 'タグ根拠を生成'}
           </button>
+        </div>
+      </div>
+
+      {/* データ更新セクション */}
+      <div className="mt-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          🔄 データ更新
+        </h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* 古いデータを更新 */}
+          <div className="card">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
+              📊 古いデータを更新
+            </h3>
+            <p className="text-sm text-gray-600 mb-4">
+              stale_levelが高いVTuberのデータ（登録者数、視聴回数など）を優先的に更新します。
+            </p>
+
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                更新するVTuber数
+              </label>
+              <input
+                type="number"
+                value={staleLimit}
+                onChange={(e) => setStaleLimit(parseInt(e.target.value))}
+                min="1"
+                max="100"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+              />
+              <p className="text-xs text-gray-500 mt-1">
+                推奨: 50件
+              </p>
+            </div>
+
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                最小stale_level
+              </label>
+              <select
+                value={minStaleLevel}
+                onChange={(e) => setMinStaleLevel(parseInt(e.target.value))}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+              >
+                <option value="0">0: 新鮮（1週間以内）</option>
+                <option value="1">1: やや古い（1ヶ月以内）</option>
+                <option value="2">2: 古い（3ヶ月以内）</option>
+                <option value="3">3: 非常に古い（3ヶ月以上）</option>
+              </select>
+              <p className="text-xs text-gray-500 mt-1">
+                推奨: 1（やや古い）
+              </p>
+            </div>
+
+            <button
+              onClick={handleUpdateStale}
+              disabled={updatingStale}
+              className="btn btn-primary w-full"
+            >
+              {updatingStale ? '更新中...' : '古いデータを更新'}
+            </button>
+          </div>
+
+          {/* stale_levelを再計算 */}
+          <div className="card">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
+              🔢 stale_levelを再計算
+            </h3>
+            <p className="text-sm text-gray-600 mb-4">
+              すべてのVTuberのstale_level（データの鮮度）を再計算します。
+            </p>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
+              <h4 className="font-bold text-gray-900 mb-2">stale_levelとは？</h4>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• <strong>0</strong>: 新鮮（1週間以内に更新）</li>
+                <li>• <strong>1</strong>: やや古い（1ヶ月以内に更新）</li>
+                <li>• <strong>2</strong>: 古い（3ヶ月以内に更新）</li>
+                <li>• <strong>3</strong>: 非常に古い（3ヶ月以上更新なし）</li>
+              </ul>
+            </div>
+
+            <button
+              onClick={handleRecalculateStale}
+              disabled={recalculatingStale}
+              className="btn btn-secondary w-full"
+            >
+              {recalculatingStale ? '計算中...' : 'stale_levelを再計算'}
+            </button>
+          </div>
         </div>
       </div>
     </div>
