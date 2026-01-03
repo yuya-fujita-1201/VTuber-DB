@@ -11,6 +11,7 @@ import { adminActionsRoutes } from './routes/admin-actions';
 import { searchRoutes } from './routes/search';
 import { bulkImportRoutes } from './routes/bulk-import';
 import { ingestionRoutes } from './routes/ingestion';
+import { adminBatchRoutes } from './routes/admin-batch';
 
 const app = new Hono();
 
@@ -39,6 +40,7 @@ app.route('/api/tags', tagRoutes);
 app.route('/api/tags', tagsSlugRoutes);
 app.route('/api/admin', adminRoutes);
 app.route('/api/admin', adminActionsRoutes);
+app.route('/api/admin', adminBatchRoutes);
 app.route('/api/search', searchRoutes);
 app.route('/api/ingestion-requests', ingestionRoutes);
 

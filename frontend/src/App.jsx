@@ -10,6 +10,7 @@ import Admin from './pages/Admin';
 import JobMonitor from './pages/admin/JobMonitor';
 import IngestionRequests from './pages/admin/IngestionRequests';
 import TagEditor from './pages/admin/TagEditor';
+import DataCollection from './pages/admin/DataCollection';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="admin/jobs" element={<JobMonitor />} />
         <Route path="admin/ingestion-requests" element={<IngestionRequests />} />
         <Route path="admin/tags" element={<TagEditor />} />
+        <Route path="admin/data-collection" element={<DataCollection />} />
       </Route>
     </Routes>
   );

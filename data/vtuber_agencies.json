@@ -1,0 +1,81 @@
+{
+  "agencies": [
+    {
+      "name": "ホロライブ",
+      "name_en": "hololive",
+      "channels": [
+        "UCp6993wxpyDPHUpavwDFqgg",
+        "UCoSrY_IQQVpmIRZ9Xf-y93g",
+        "UC1CfXB_kRs3C-zaeTG3oGyg",
+        "UC5CwaMl1eIgY8h02uZw7u8A",
+        "UC1opHUrw8rvnsadT-iGp7Cg",
+        "UCDqI2jOz0weumE8s7paEk6g",
+        "UC-hM6YJuNYVAmUWxeIr9FeA",
+        "UCdn5BQ06XqgXoAxIhbqw5Rg",
+        "UCQ0UDLQCjY0rmuxCDE38FGg",
+        "UCFTLzh12_nrtzqBPsTCqenA"
+      ]
+    },
+    {
+      "name": "にじさんじ",
+      "name_en": "nijisanji",
+      "channels": [
+        "UCX7YkU9nEeaoZbkVLVajcMg",
+        "UCsg-YqdqQ-KFF0LNk23BY4A",
+        "UCD-miitqNY3nyukJ4Fnf4_A",
+        "UCbvON8zOIgcHSrSmTt5KjBg",
+        "UCo7TRj3cS-f_1D9ZDmuTsjw",
+        "UCveZ9Ic1VtcXbsyaBgxPMvg",
+        "UC53UDnhAAYwvNO7j_2Ju1cQ",
+        "UCtnO2N4kPTXmyvedjGWdx3Q",
+        "UCsFn_ueskBkMCEyzCEqAOvg",
+        "UCmeyo5pRj_6PXG-CsGUuWWg"
+      ]
+    },
+    {
+      "name": "ぶいすぽっ!",
+      "name_en": "vspo",
+      "channels": [
+        "UCIcAj6WkJ8vZ7DeJVgmeqKw",
+        "UCurEA8YoqFwimJcAuSHU0MQ",
+        "UCMp55EbT_ZlqiMS3lCj01BQ",
+        "UC61OwuYOVuKkpKnid-43Twg",
+        "UCvUc0m317LWTTPZoBQV479A",
+        "UC2OacIzd2UxGHRGhdHl1Rhw",
+        "UCX4WL24YEOUYd7qDsFSLDOw",
+        "UCgTzsBI0DIRopMylJEDqnog"
+      ]
+    },
+    {
+      "name": "774inc.",
+      "name_en": "774inc",
+      "channels": [
+        "UCuDY3ibSP2MFRgf7eo3cojg",
+        "UCyb-cllCkMREr9de-hoiDrg",
+        "UCIytNcoz4pWzXfLda0DoULQ",
+        "UCRWVjIhozGzVxCQMq5dJdgA",
+        "UCdYR5Oyz8Q4g0ZmB4PkTD7g"
+      ]
+    },
+    {
+      "name": "Re:AcT",
+      "name_en": "react",
+      "channels": [
+        "UCyBJnr644RnUbUZRYT_Cpbg",
+        "UCvzVB-EYuHFXHZrObB8a_Og",
+        "UCIjdfjcShjcuFq-BZsGD1NA",
+        "UC2kyQhzGOB-JPgcQX9OMgEw"
+      ]
+    },
+    {
+      "name": "あおぎり高校",
+      "name_en": "aogiri",
+      "channels": [
+        "UCgmPnx-EEeOrZSg5Tiw7ZRQ",
+        "UC0rVLx3IyZHzFhkLXYvKGSw",
+        "UCyLGcqYs7RsBb3L0SJbJQYA",
+        "UC7YXqPO3eUnxbJ6rN0z2z1Q"
+      ]
+    }
+  ]
+}
