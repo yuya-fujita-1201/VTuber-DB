@@ -323,10 +323,11 @@ function DataCollection() {
             <p className="text-xs text-gray-500 mt-1">
               新人発見には「新しい順」を推奨
             </p>
-          </div>  <p className="text-xs text-gray-500 mt-1">
-              ※YouTube APIのクォータを消費します。大量収集は計画的に実行してください。
-            </p>
           </div>
+
+          <p className="text-xs text-gray-500 mt-1">
+            ※YouTube APIのクォータを消費します。大量収集は計画的に実行してください。
+          </p>
 
           <button
             onClick={handleMassCollect}
