@@ -54,7 +54,9 @@ export class YouTubeService {
    * @param {string} order - 検索結果の並び順（relevance, date, viewCount）
    * @returns {Promise<Array>} チャンネル一覧
    */
-  async searchChannels(query, maxResults = 10, order = 'relevance') {
+  async searchChannels(query, maxResults, order) {
+    maxResults = maxResults || 10;
+    order = order || 'relevance';
     try {
       const url = `${this.baseUrl}/search?part=snippet&type=channel&q=${encodeURIComponent(query)}&maxResults=${maxResults}&order=${order}&key=${this.apiKey}`;
       const response = await fetch(url);
@@ -127,7 +129,8 @@ export class YouTubeService {
    * @param {number} maxResults - 最大結果数
    * @returns {Promise<Array>} 動画一覧
    */
-  async getLatestVideos(channelId, maxResults = 10) {
+  async getLatestVideos(channelId, maxResults) {
+    maxResults = maxResults || 10;
     try {
       const url = `${this.baseUrl}/search?part=snippet&channelId=${channelId}&order=date&type=video&maxResults=${maxResults}&key=${this.apiKey}`;
       const response = await fetch(url);
@@ -210,7 +213,6 @@ export class YouTubeService {
       throw error;
     }
   }
-}
 
   /**
    * チャンネルの動画を詳細情報付きで取得
@@ -218,7 +220,8 @@ export class YouTubeService {
    * @param {number} maxResults - 最大結果数
    * @returns {Promise<Array>} 動画詳細情報の配列
    */
-  async getChannelVideos(channelId, maxResults = 5) {
+  async getChannelVideos(channelId, maxResults) {
+    maxResults = maxResults || 5;
     try {
       // ステップ1: 動画IDを取得
       const searchUrl = `${this.baseUrl}/search?part=snippet&channelId=${channelId}&order=date&type=video&maxResults=${maxResults}&key=${this.apiKey}`;
