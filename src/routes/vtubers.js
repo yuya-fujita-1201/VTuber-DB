@@ -96,17 +96,34 @@ vtuberRoutes.get('/:id', async (c) => {
 
     // Twitter/Twitch情報は削除済み
 
-    // タグ情報
+    // タグ情報（score, evidence_count追加）
     const { results: tags } = await db
       .prepare(`
-        SELECT t.*, vt.confidence, vt.is_verified
+        SELECT t.*, vt.confidence, vt.score, vt.evidence_count, vt.is_verified
         FROM tags t
         JOIN vtuber_tags vt ON t.id = vt.tag_id
         WHERE vt.vtuber_id = ?
-        ORDER BY t.category, t.name
+        ORDER BY vt.score DESC, t.category, t.name
       `)
       .bind(id)
       .all();
+
+    // タグごとの根拠を取得
+    const tagsWithEvidence = await Promise.all(
+      tags.map(async (tag) => {
+        const { results: evidence } = await db
+          .prepare(`
+            SELECT platform, content_id, evidence_type, snippet, weight
+            FROM vtuber_tag_evidence
+            WHERE vtuber_id = ? AND tag_id = ?
+            ORDER BY weight DESC
+            LIMIT 5
+          `)
+          .bind(id, tag.id)
+          .all();
+        return { ...tag, evidence };
+      })
+    );
 
     // 最近の配信情報
     const { results: streams } = await db
@@ -119,11 +136,39 @@ vtuberRoutes.get('/:id', async (c) => {
       .bind(id)
       .all();
 
+    // 似ているVTuber（共通タグが多い順）
+    const { results: similarVtubers } = await db
+      .prepare(`
+        SELECT 
+          v.id, v.name, v.avatar_url,
+          y.subscriber_count,
+          COUNT(DISTINCT vt2.tag_id) as common_tags
+        FROM vtubers v
+        JOIN vtuber_tags vt2 ON v.id = vt2.vtuber_id
+        LEFT JOIN youtube_channels y ON v.id = y.vtuber_id
+        WHERE vt2.tag_id IN (
+          SELECT tag_id FROM vtuber_tags WHERE vtuber_id = ?
+        )
+        AND v.id != ?
+        GROUP BY v.id
+        ORDER BY common_tags DESC, y.subscriber_count DESC
+        LIMIT 10
+      `)
+      .bind(id, id)
+      .all();
+
+    // last_viewed_atを更新（オンデマンド更新用）
+    await db
+      .prepare('UPDATE vtubers SET last_viewed_at = CURRENT_TIMESTAMP WHERE id = ?')
+      .bind(id)
+      .run();
+
     return c.json({
       ...vtuber,
       youtube: youtube[0] || null,
-      tags: tags,
+      tags: tagsWithEvidence,
       recent_streams: streams,
+      similar_vtubers: similarVtubers,
     });
   } catch (error) {
     console.error('Error fetching vtuber:', error);

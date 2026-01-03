@@ -32,14 +32,28 @@ searchRoutes.get('/', async (c) => {
     const conditions = [];
     const params = [];
 
-    // タグ検索
+    // タグ検索（階層含む）
+    let searchTagIds = [];
     if (tags) {
-      const tagIds = tags.split(',').map(id => parseInt(id));
+      const inputTagIds = tags.split(',').map(id => parseInt(id));
+      
+      // 階層タグを含める（tag_closureを使用）
+      const { results: descendantTags } = await db
+        .prepare(`
+          SELECT DISTINCT descendant_id
+          FROM tag_closure
+          WHERE ancestor_id IN (${inputTagIds.map(() => '?').join(',')})
+        `)
+        .bind(...inputTagIds)
+        .all();
+      
+      searchTagIds = [...new Set([...inputTagIds, ...descendantTags.map(t => t.descendant_id)])];
+      
       query += `
         JOIN vtuber_tags vt ON v.id = vt.vtuber_id
       `;
-      conditions.push(`vt.tag_id IN (${tagIds.map(() => '?').join(',')})`);
-      params.push(...tagIds);
+      conditions.push(`vt.tag_id IN (${searchTagIds.map(() => '?').join(',')})`);
+      params.push(...searchTagIds);
     }
 
     // キーワード検索
@@ -94,8 +108,27 @@ searchRoutes.get('/', async (c) => {
 
     const { results } = await db.prepare(query).bind(...params).all();
 
+    // 探索支援：次に辽る候補タグ（関連タグ）
+    let suggestedTags = [];
+    if (searchTagIds.length > 0) {
+      const { results: relatedTags } = await db
+        .prepare(`
+          SELECT DISTINCT t.id, t.name, t.slug, tr.weight
+          FROM tags t
+          JOIN tag_relations tr ON t.id = tr.related_tag_id
+          WHERE tr.tag_id IN (${searchTagIds.map(() => '?').join(',')})
+          AND t.id NOT IN (${searchTagIds.map(() => '?').join(',')})
+          ORDER BY tr.weight DESC
+          LIMIT 10
+        `)
+        .bind(...searchTagIds, ...searchTagIds)
+        .all();
+      suggestedTags = relatedTags;
+    }
+
     return c.json({
       data: results,
+      suggested_tags: suggestedTags,
       pagination: {
         limit: parseInt(limit),
         offset: parseInt(offset),

@@ -147,27 +147,47 @@ function VTuberDetail() {
 
         {/* Sidebar */}
         <div className="lg:col-span-1">
-          {/* Tags */}
+          {/* Tags with Evidence */}
           <div className="card">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">タグ</h2>
             {Object.entries(tagsByCategory).map(([category, tags]) => (
-              <div key={category} className="mb-4">
-                <h3 className="text-sm font-semibold text-gray-600 mb-2">
+              <div key={category} className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-600 mb-3">
                   {category}
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="space-y-3">
                   {tags.map((tag) => (
-                    <Link
-                      key={tag.id}
-                      to={`/tags/${tag.id}`}
-                      className={`px-3 py-1 rounded-full text-sm ${tag.is_verified
-                          ? 'bg-primary-100 text-primary-800'
-                          : 'bg-gray-100 text-gray-800'
-                        }`}
-                    >
-                      {tag.name}
-                      {!tag.is_verified && ' *'}
-                    </Link>
+                    <div key={tag.id} className="border-l-4 border-primary-500 pl-3">
+                      <div className="flex items-center justify-between mb-1">
+                        <Link
+                          to={`/tags/${tag.id}`}
+                          className="font-semibold text-gray-900 hover:text-primary-600"
+                        >
+                          {tag.name}
+                        </Link>
+                        <div className="flex items-center gap-2">
+                          {tag.score && (
+                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
+                              {Math.round(tag.score * 100)}%
+                            </span>
+                          )}
+                          {!tag.is_verified && (
+                            <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
+                              AI
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      {tag.evidence && tag.evidence.length > 0 && (
+                        <div className="mt-2 space-y-1">
+                          {tag.evidence.slice(0, 2).map((ev, idx) => (
+                            <div key={idx} className="text-xs text-gray-600 bg-gray-50 p-2 rounded">
+                              <span className="font-medium">{ev.platform}</span>: {ev.snippet}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
@@ -175,10 +195,42 @@ function VTuberDetail() {
             {vtuber.tags && vtuber.tags.length === 0 && (
               <p className="text-gray-600">タグはまだありません</p>
             )}
-            <p className="text-xs text-gray-500 mt-4">
-              * 未承認のAI生成タグ
-            </p>
           </div>
+
+          {/* Similar VTubers */}
+          {vtuber.similar_vtubers && vtuber.similar_vtubers.length > 0 && (
+            <div className="card mt-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                似ているVTuber
+              </h2>
+              <div className="space-y-3">
+                {vtuber.similar_vtubers.slice(0, 5).map((similar) => (
+                  <Link
+                    key={similar.id}
+                    to={`/vtubers/${similar.id}`}
+                    className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition"
+                  >
+                    {similar.avatar_url && (
+                      <img
+                        src={similar.avatar_url}
+                        alt={similar.name}
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                    )}
+                    <div className="flex-1">
+                      <div className="font-semibold text-gray-900">{similar.name}</div>
+                      <div className="text-sm text-gray-600">
+                        {similar.subscriber_count?.toLocaleString() || 0} 登録者
+                      </div>
+                    </div>
+                    <div className="text-xs bg-primary-100 text-primary-800 px-2 py-1 rounded">
+                      {similar.common_tags} 共通タグ
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
