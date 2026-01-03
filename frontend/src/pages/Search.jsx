@@ -10,6 +10,7 @@ function Search() {
   const [sort, setSort] = useState('subscribers');
 
   const [results, setResults] = useState([]);
+  const [suggestedTags, setSuggestedTags] = useState([]);
   const [tags, setTags] = useState([]);
   const [agencies, setAgencies] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -54,6 +55,7 @@ function Search() {
       const res = await fetch(`${API_BASE_URL}/api/search?${params.toString()}`);
       const data = await res.json();
       setResults(data.data || []);
+      setSuggestedTags(data.suggested_tags || []);
     } catch (error) {
       console.error('Error searching:', error);
     } finally {
@@ -201,6 +203,30 @@ function Search() {
 
         {/* Search Results */}
         <div className="lg:col-span-3">
+          {/* Suggested Tags */}
+          {suggestedTags.length > 0 && (
+            <div className="card mb-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                💡 次に辽る候補タグ
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {suggestedTags.map((tag) => (
+                  <button
+                    key={tag.id}
+                    onClick={() => {
+                      if (!selectedTags.includes(tag.id)) {
+                        setSelectedTags([...selectedTags, tag.id]);
+                      }
+                    }}
+                    className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm hover:bg-primary-100 transition"
+                  >
+                    + {tag.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           {loading ? (
             <div className="text-center py-12">
               <div className="text-xl text-gray-600">検索中...</div>
