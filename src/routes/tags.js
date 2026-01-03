@@ -40,7 +40,7 @@ tagRoutes.get('/', async (c) => {
 });
 
 // タグ詳細取得（このタグを持つVTuber一覧）
-tagRoutes.get('/:id', async (c) => {
+tagRoutes.get('/:id{[0-9]+}', async (c) => {
   const db = c.env.DB;
   const id = c.req.param('id');
 
@@ -104,7 +104,7 @@ tagRoutes.post('/', async (c) => {
 });
 
 // タグ更新（管理者用）
-tagRoutes.put('/:id', async (c) => {
+tagRoutes.put('/:id{[0-9]+}', async (c) => {
   const db = c.env.DB;
   const id = c.req.param('id');
   const data = await c.req.json();
@@ -125,7 +125,7 @@ tagRoutes.put('/:id', async (c) => {
 });
 
 // タグ削除（管理者用）
-tagRoutes.delete('/:id', async (c) => {
+tagRoutes.delete('/:id{[0-9]+}', async (c) => {
   const db = c.env.DB;
   const id = c.req.param('id');
 
@@ -144,14 +144,15 @@ tagRoutes.post('/assign', async (c) => {
   const data = await c.req.json();
 
   try {
-    const { vtuber_id, tag_id, confidence = 1.0, is_verified = 0 } = data;
+    const { vtuber_id, tag_id, score, confidence = 1.0, is_verified = 0 } = data;
+    const resolvedScore = typeof score === 'number' ? score : confidence;
 
     await db
       .prepare(`
-        INSERT OR REPLACE INTO vtuber_tags (vtuber_id, tag_id, confidence, is_verified)
-        VALUES (?, ?, ?, ?)
+        INSERT OR REPLACE INTO vtuber_tags (vtuber_id, tag_id, score, confidence, is_verified)
+        VALUES (?, ?, ?, ?, ?)
       `)
-      .bind(vtuber_id, tag_id, confidence, is_verified)
+      .bind(vtuber_id, tag_id, resolvedScore, confidence, is_verified)
       .run();
 
     return c.json({ message: 'Tag assigned successfully' }, 201);

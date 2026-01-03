@@ -68,10 +68,10 @@ export async function runAITagging(env, limit = 100) {
           try {
             await db
               .prepare(`
-                INSERT OR REPLACE INTO vtuber_tags (vtuber_id, tag_id, confidence, is_verified)
-                VALUES (?, ?, ?, 0)
+                INSERT OR REPLACE INTO vtuber_tags (vtuber_id, tag_id, score, confidence, is_verified)
+                VALUES (?, ?, ?, ?, 0)
               `)
-              .bind(vtuber.id, tag.tag_id, tag.confidence)
+              .bind(vtuber.id, tag.tag_id, tag.confidence, tag.confidence)
               .run();
 
             totalTagsAdded++;
@@ -171,10 +171,10 @@ export async function runAITaggingForVTuber(env, vtuberId) {
     for (const tag of suggestedTags) {
       await db
         .prepare(`
-          INSERT OR REPLACE INTO vtuber_tags (vtuber_id, tag_id, confidence, is_verified)
-          VALUES (?, ?, ?, 0)
+          INSERT OR REPLACE INTO vtuber_tags (vtuber_id, tag_id, score, confidence, is_verified)
+          VALUES (?, ?, ?, ?, 0)
         `)
-        .bind(vtuberId, tag.tag_id, tag.confidence)
+        .bind(vtuberId, tag.tag_id, tag.confidence, tag.confidence)
         .run();
 
       tagsAdded++;

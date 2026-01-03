@@ -87,12 +87,13 @@ export async function aiTaggingVtuberJob(env, payload) {
   for (const tag of suggestedTags) {
     await db
       .prepare(`
-        INSERT INTO vtuber_tags (vtuber_id, tag_id, confidence, is_verified)
-        VALUES (?, ?, ?, 0)
+        INSERT INTO vtuber_tags (vtuber_id, tag_id, score, confidence, is_verified)
+        VALUES (?, ?, ?, ?, 0)
         ON CONFLICT(vtuber_id, tag_id) DO UPDATE SET
+          score = excluded.score,
           confidence = excluded.confidence
       `)
-      .bind(vtuber_id, tag.tag_id, tag.confidence)
+      .bind(vtuber_id, tag.tag_id, tag.confidence, tag.confidence)
       .run();
 
     if (evidenceColumns.length > 0) {

@@ -4,10 +4,13 @@ import { vtuberRoutes } from './routes/vtubers';
 import { youtubeRoutes } from './routes/youtube';
 
 import { tagRoutes } from './routes/tags';
+import { tagsTreeRoutes } from './routes/tags-tree';
+import { tagsSlugRoutes } from './routes/tags-slug';
 import { adminRoutes } from './routes/admin';
 import { adminActionsRoutes } from './routes/admin-actions';
 import { searchRoutes } from './routes/search';
 import { bulkImportRoutes } from './routes/bulk-import';
+import { ingestionRoutes } from './routes/ingestion';
 
 const app = new Hono();
 
@@ -31,10 +34,13 @@ app.get('/', (c) => {
 app.route('/api/vtubers', vtuberRoutes);
 app.route('/api/youtube', youtubeRoutes);
 
+app.route('/api/tags', tagsTreeRoutes);
 app.route('/api/tags', tagRoutes);
+app.route('/api/tags', tagsSlugRoutes);
 app.route('/api/admin', adminRoutes);
 app.route('/api/admin', adminActionsRoutes);
 app.route('/api/search', searchRoutes);
+app.route('/api/ingestion-requests', ingestionRoutes);
 
 // 統計情報の直接ルート（/api/stats）
 app.get('/api/stats', async (c) => {
